@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import Card from '../../components/Card';
-import { ExternalLinkIcon } from '../../components/Icons';
-import Spinner from '../../components/Spinner';
+import Card from '../../Card';
+import { ExternalLinkIcon } from '../../Icons';
+import Spinner from '../../Spinner';
 
 interface JoinUsAssets {
     pageTitle: string;

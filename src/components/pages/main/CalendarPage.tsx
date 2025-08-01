@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import type { Project, Activity, Workshop } from '../../constants';
-import { XIcon } from '../../components/Icons';
-import Spinner from '../../components/Spinner';
+import type { Project, Activity, Workshop } from '../../../constants';
+import { XIcon } from '../../Icons';
+import Spinner from '../../Spinner';
 
 interface CalendarEvent {
   id: string;
@@ -189,3 +189,4 @@ const CalendarPage: React.FC = () => {
 };
 
 export default CalendarPage;
+

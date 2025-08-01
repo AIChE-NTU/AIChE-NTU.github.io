@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import type { Activity } from '../../constants';
+import type { Activity } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
-import { XIcon } from '../../components/Icons';
+import { XIcon } from '../../Icons';
 
 const ActivityDetailPage: React.FC = () => {
     const { activityId } = useParams<{ activityId: string }>();

@@ -56,7 +56,7 @@ const Header: React.FC = () => {
                                 </NavLink>
                             ) : (
                                 <div key={link.name} className="relative group">
-                                    <NavLink to={link.path} className={`${linkClasses} flex items-center gap-1`} style={({ isActive, isPending }) => (isActive || window.location.hash.startsWith(`#${link.path}`)) ? activeLinkStyle : {}}>
+                                    <NavLink to={link.path} className={`${linkClasses} flex items-center gap-1`} style={({ isActive }) => (isActive || window.location.hash.startsWith(`#${link.path}`)) ? activeLinkStyle : {}}>
                                         {link.name}
                                         <ChevronDownIcon className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                                     </NavLink>

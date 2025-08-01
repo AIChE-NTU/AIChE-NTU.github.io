@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Spinner from '../../components/Spinner';
+import Spinner from '../../Spinner';
 
 interface InfoItem {
     label: string;

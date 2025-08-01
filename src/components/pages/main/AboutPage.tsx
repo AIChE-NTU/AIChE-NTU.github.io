@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import type { TeamMember, Professor } from '../../constants';
-import { LinkedinIcon } from '../../components/Icons';
-import Spinner from '../../components/Spinner';
+import type { TeamMember, Professor } from '../../../constants';
+import { LinkedinIcon } from '../../Icons';
+import Spinner from '../../Spinner';
 
 const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
     return (
@@ -232,3 +232,4 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+

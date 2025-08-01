@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Spinner from '../../components/Spinner';
-import ProjectCard from '../../components/ProjectCard';
-import type { Project } from '../../constants';
-import { XIcon } from '../../components/Icons';
+import Spinner from '../../Spinner';
+import ProjectCard from '../../ProjectCard';
+import type { Project } from '../../../constants';
+import { XIcon } from '../../Icons';
 
 const ProjectsPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);

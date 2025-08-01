@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Spinner from '../../components/Spinner';
-import ActivityCard from '../../components/ActivityCard';
-import type { Activity } from '../../constants';
+import Spinner from '../../Spinner';
+import ActivityCard from '../../ActivityCard';
+import type { Activity } from '../../../constants';
 
 const IndustryVisitsPage: React.FC = () => {
   const [visits, setVisits] = useState<Activity[]>([]);

@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Spinner from '../../components/Spinner';
-import ProjectCard from '../../components/ProjectCard';
-import ActivityCard from '../../components/ActivityCard';
-import WorkshopCard from '../../components/WorkshopCard';
-import ArticleCard from '../../components/ArticleCard';
-import type { Project, Workshop, Activity, Article } from '../../constants';
+import Spinner from '../../Spinner';
+import ProjectCard from '../../ProjectCard';
+import ActivityCard from '../../ActivityCard';
+import WorkshopCard from '../../WorkshopCard';
+import ArticleCard from '../../ArticleCard';
+import type { Project, Workshop, Activity, Article } from '../../../constants';
 
 const HomePage: React.FC = () => {
     const [featuredProjects, setFeaturedProjects] = useState<Project[]>([]);

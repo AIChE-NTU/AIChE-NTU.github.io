@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import type { Workshop } from '../../constants';
+import type { Workshop } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
 
 const WorkshopDetailPage: React.FC = () => {

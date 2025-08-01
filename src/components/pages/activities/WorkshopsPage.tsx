@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Spinner from '../../components/Spinner';
-import WorkshopCard from '../../components/WorkshopCard';
-import type { Workshop } from '../../constants';
-import { XIcon } from '../../components/Icons';
+import Spinner from '../../Spinner';
+import WorkshopCard from '../../WorkshopCard';
+import type { Workshop } from '../../../constants';
+import { XIcon } from '../../Icons';
 
 const WorkshopsPage: React.FC = () => {
     const [workshops, setWorkshops] = useState<Workshop[]>([]);

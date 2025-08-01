@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import type { Project } from '../../constants';
-import { getTagColor } from '../../constants';
+import type { Project } from '../../../constants';
+import { getTagColor } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
 
 const ProjectDetailPage: React.FC = () => {
