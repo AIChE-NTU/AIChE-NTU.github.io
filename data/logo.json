@@ -1,0 +1,54 @@
+
+{
+  "siteLogoUrl": "https://raw.githubusercontent.com/EnsonCH/Icons/main/aiche_sc/ntu_sc_logo.png",
+  "homePageHeroImages": [
+    "https://images.unsplash.com/photo-1581093582538-a6810a47333b?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    "https://images.unsplash.com/photo-1628188689169-3aaa64614949?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    "https://images.unsplash.com/photo-1518152006812-edb29b0d37e4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    "https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
+  ],
+  "aboutPageTeamPhoto": "https://images.unsplash.com/photo-1579532582937-16c115d797e9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800",
+  "missionImageUrl": "https://images.unsplash.com/photo-1554498802-992a6d123512?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=500",
+  "partners": [
+    {
+      "name": "Dow",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Dow_Chemical_logo.svg/1280px-Dow_Chemical_logo.svg.png",
+      "website": "https://www.dow.com/"
+    },
+    {
+      "name": "BASF",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/BASF-Logo_2021.svg/1280px-BASF-Logo_2021.svg.png",
+      "website": "https://www.basf.com/"
+    },
+    {
+      "name": "ExxonMobil",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/ExxonMobil_logo.svg/1280px-ExxonMobil_logo.svg.png",
+      "website": "https://corporate.exxonmobil.com/"
+    },
+    {
+      "name": "Shell",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Shell_logo.svg/1200px-Shell_logo.svg.png",
+      "website": "https://www.shell.com/"
+    },
+    {
+      "name": "3M",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/3M_logo.svg/1200px-3M_logo.svg.png",
+      "website": "https://www.3m.com/"
+    },
+    {
+      "name": "DuPont",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DuPont_2019_logo.svg/1280px-DuPont_2019_logo.svg.png",
+      "website": "https://www.dupont.com/"
+    },
+    {
+      "name": "Merck",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Merck_Group_logo_2021.svg/1280px-Merck_Group_logo_2021.svg.png",
+      "website": "https://www.merckgroup.com/"
+    },
+    {
+      "name": "Chevron",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Chevron_logo.svg/1200px-Chevron_logo.svg.png",
+      "website": "https://www.chevron.com/"
+    }
+  ]
+}

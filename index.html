@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIChE NTU Student Chapter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-primary: 20 184 166; /* teal-500 */
+        --color-primary-focus: 13 148 136; /* teal-600 */
+        --color-background: 248 250 252; /* slate-50 */
+        --color-surface: 255 255 255; /* white */
+        --color-surface-alt: 241 245 249; /* slate-100 */
+        --color-text-main: 30 41 59; /* slate-800 */
+        --color-text-muted: 100 116 139; /* slate-500 */
+      }
+      html.dark {
+        --color-primary: 20 184 166; /* teal-500 */
+        --color-primary-focus: 13 148 136; /* teal-600 */
+        --color-background: 15 23 42; /* slate-900 */
+        --color-surface: 30 41 59; /* slate-800 */
+        --color-surface-alt: 15 23 42; /* slate-900 */
+        --color-text-main: 241 245 249; /* slate-100 */
+        --color-text-muted: 148 163 184; /* slate-400 */
+      }
+      body {
+        background-color: rgb(var(--color-background));
+        color: rgb(var(--color-text-main));
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': `rgb(var(--color-primary) / <alpha-value>)`,
+              'primary-focus': `rgb(var(--color-primary-focus) / <alpha-value>)`,
+              'background': `rgb(var(--color-background) / <alpha-value>)`,
+              'surface': `rgb(var(--color-surface) / <alpha-value>)`,
+              'surface-alt': `rgb(var(--color-surface-alt) / <alpha-value>)`,
+              'text-main': `rgb(var(--color-text-main) / <alpha-value>)`,
+              'text-muted': `rgb(var(--color-text-muted) / <alpha-value>)`,
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              float: 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.7.1",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

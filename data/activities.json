@@ -1,0 +1,117 @@
+[
+    {
+        "id": "cider-making-workshop-zymurgy-2024",
+        "title": "Cider Making Workshop with Zymurgy Build",
+        "description": "A hands-on workshop where members learned the art and science of cider fermentation with the experts from Zymurgy Build.",
+        "details": "In a unique collaboration, our chapter partnered with Zymurgy Build for an exclusive cider making workshop. Participants got a crash course in fermentation science, from selecting the right apples to understanding yeast activity. It was a fantastic blend of chemical engineering principles and a fun, practical skill. Everyone left with their own batch of cider to ferment at home!",
+        "imageUrl": "/images/cider-making-workshop-zymurgy-2024/01.jpg",
+        "date": "October 26, 2024",
+        "schedule": [
+            { "time": "2:00 PM", "event": "Introduction to Fermentation Science" },
+            { "time": "2:30 PM", "event": "Preparing the Must & Sanitization" },
+            { "time": "3:00 PM", "event": "Measuring Specific Gravity" },
+            { "time": "3:30 PM", "event": "Yeast Pitching & Fermenter Setup" },
+            { "time": "4:30 PM", "event": "Tasting Session & Q&A" }
+        ],
+        "galleryImages": [
+            "/images/cider-making-workshop-zymurgy-2024/01.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/02.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/03.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/04.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/05.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/06.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/07.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/08.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/09.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/10.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/11.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/12.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/13.jpg",
+            "/images/cider-making-workshop-zymurgy-2024/14.jpg"
+        ]
+    },
+    {
+        "id": "career-sharing-session-2024",
+        "title": "NTU x NUS Exchange Day",
+        "description": "A collaborative event with NUS AIChE, featuring insights from alumni, past presidents, and professors on navigating a career in chemical engineering.",
+        "details": "In partnership with the NUS AIChE Student Chapter, this session provided a platform for students to hear from those who have walked the path before them. We invited successful alumni, past chapter presidents, and faculty to share their career journeys, provide advice, and answer questions. The day ended with a networking session, allowing students from both universities to connect.",
+        "imageUrl": "https://picsum.photos/seed/activity3/400/300",
+        "date": "September 28, 2024",
+        "registrationUrl": "",
+        "schedule": [
+            { "time": "1:00 PM", "event": "Opening Address by Chapter Presidents" },
+            { "time": "1:30 PM", "event": "Panel Discussion: Careers in Academia vs. Industry" },
+            { "time": "2:45 PM", "event": "Breakout Session: Q&A with Alumni" },
+            { "time": "4:00 PM", "event": "Networking Reception" }
+        ],
+        "galleryImages": [
+            "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1556740738-b6a63e2775df?q=80&w=600&auto=format&fit=crop"
+        ]
+    },
+    {
+        "id": "welcome-recruitment-cceb-day-2025",
+        "title": "Welcome & Recruitment @ CCEB Day",
+        "description": "Join us at CCEB Day to learn about AIChE, meet the team, and find out how to become a member. A great start to the academic year!",
+        "details": "We're kicking off the academic year with a recruitment drive during the CCEB Day festivities. This is the perfect opportunity for new and returning students to connect with our executive committee, ask questions about our plans for the year, and sign up for an AIChE student membership. Our goal is to grow our community and recruit passionate individuals for our EXCO.",
+        "imageUrl": "https://picsum.photos/seed/activity1/400/300",
+        "date": "August 18, 2025"
+    },
+    {
+        "id": "welcome-tea-info-session-2025",
+        "title": "Welcome Tea & Info Session",
+        "description": "An introductory session to formally welcome new members, introduce the EXCO, and outline our exciting plans for the year.",
+        "details": "Come for the tea, stay for the community! This session is designed to formally introduce the AIChE NTU Student Chapter to all members. We'll present our executive committee, detail our mission, and walk you through the calendar of workshops, projects, and events planned for the academic year.",
+        "imageUrl": "https://picsum.photos/seed/activity2/400/300",
+        "date": "August 25, 2025"
+    },
+    {
+        "id": "social-night-trivia-games-2025",
+        "title": "Social Night: Trivia & Boardgames",
+        "description": "Unwind and connect with fellow members over a night of fun trivia and classic boardgames. A perfect internal bonding event.",
+        "details": "Time to take a break from the books! Join us for a chill social night to foster connections within the chapter. We'll have a variety of boardgames, a friendly trivia competition with prizes, and plenty of snacks. It's all about building a strong, supportive community.",
+        "imageUrl": "https://picsum.photos/seed/activity4/400/300",
+        "date": "November 15, 2025"
+    },
+    {
+        "id": "singapore-cheme-bootcamp-2026",
+        "title": "SG ChemE Bootcamp: Industry 4.0",
+        "description": "A proposed 2-day bootcamp before the semester starts, focused on Industry 4.0 in Chemical Engineering, in collaboration with other Singapore student chapters.",
+        "details": "Let's innovate together! We are planning a major bootcamp with other AIChE student chapters in Singapore (NUS, SIT, etc.) centered on the theme of Industry 4.0. The event would feature speakers, workshops, and case challenges related to AI, IoT, and automation in the chemical industry.",
+        "imageUrl": "https://picsum.photos/seed/activity5/400/300",
+        "date": "January 10, 2026"
+    },
+     {
+        "id": "jc-poly-outreach-2026",
+        "title": "Outreach for JC/Poly Students",
+        "description": "An exciting outreach program to introduce younger students to the world of chemical engineering through an 'Amazing Race' style competition.",
+        "details": "Inspiring the next generation of engineers! We're organizing a grand outreach event for JC and Polytechnic students. The day will feature an 'Amazing Race' style quiz across campus, followed by a final competition at NTU. This is a great chance for our members to act as mentors and showcase the fun side of chemical engineering.",
+        "imageUrl": "https://picsum.photos/seed/activity6/400/300",
+        "date": "February 21, 2026"
+    },
+    {
+        "id": "industrial-mentorship-launch-2026",
+        "title": "Industrial Mentorship Program Launch",
+        "description": "A pilot program pairing our members with experienced NTU alumni and industry mentors for career guidance and networking.",
+        "details": "We are launching a pilot mentorship program to connect students directly with professionals in the field. Participants will be paired with NTU alumni or other industry contacts for one-on-one guidance on career planning, resume building, and professional development. This is an invaluable opportunity to gain a personal advisor in your chosen field.",
+        "imageUrl": "https://picsum.photos/seed/activity7/400/300",
+        "date": "April 4, 2026"
+    },
+    {
+        "id": "agm-elections-2026",
+        "title": "Annual General Meeting (AGM) & Elections",
+        "description": "Join us for our AGM to review the year's achievements, present our annual report, and elect the next executive committee.",
+        "details": "The AGM is a key event where we reflect on the past year's successes and chart the course for the future. We will present the annual report, discuss finances, and hold elections for the next academic year's Executive Committee. Your vote and voice are crucial for the chapter's future!",
+        "imageUrl": "https://picsum.photos/seed/activity8/400/300",
+        "date": "May 16, 2026"
+    },
+    {
+        "id": "malaysia-chapter-visit-2026",
+        "title": "Visit to Malaysia AIChE Student Chapter",
+        "description": "An exciting opportunity for a collaborative visit to a university in Malaysia to network with their AIChE student chapter.",
+        "details": "Let's go international! We are planning a trip to visit a partner university in Malaysia to connect with their AIChE Student Chapter. This would be a fantastic opportunity for cross-cultural exchange, sharing of ideas, and building a wider professional network. The trip would include a campus tour and joint activities.",
+        "imageUrl": "https://picsum.photos/seed/activity9/400/300",
+        "date": "June 7, 2026"
+    }
+]
