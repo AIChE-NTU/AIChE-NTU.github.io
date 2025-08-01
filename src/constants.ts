@@ -1,7 +1,8 @@
 
 // Helper function to get correct data URLs for GitHub Pages
 export const getDataUrl = (path: string): string => {
-  const base = import.meta.env.BASE_URL || '/';
+  // Use the base URL from Vite's environment or default to root
+  const base = '/homepage.github.io/';
   return `${base}data/${path}`;
 };
 
