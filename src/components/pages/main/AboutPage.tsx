@@ -88,7 +88,11 @@ const AboutPage: React.FC = () => {
         setProfessors(profData);
 
         if (teamDataJson.executiveBoard && Object.keys(teamDataJson.executiveBoard).length > 0) {
-            setActiveTab(Object.keys(teamDataJson.executiveBoard)[0]);
+            // Find the first team with members
+            const firstTeamWithMembers = Object.keys(teamDataJson.executiveBoard).find(
+                teamName => teamDataJson.executiveBoard[teamName].length > 0
+            );
+            setActiveTab(firstTeamWithMembers || Object.keys(teamDataJson.executiveBoard)[0]);
         }
         
         if(logoData.missionImageUrl) setMissionImageUrl(logoData.missionImageUrl);
@@ -157,7 +161,9 @@ const AboutPage: React.FC = () => {
         {isLoading ? <div className="flex justify-center"><Spinner /></div> : teamData && (
           <>
             <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-8">
-              {Object.keys(teamData.executiveBoard).map(teamName => (
+              {Object.keys(teamData.executiveBoard)
+                .filter(teamName => teamData.executiveBoard[teamName].length > 0)
+                .map(teamName => (
                 <button
                   key={teamName}
                   onClick={() => handleTabClick(teamName)}
@@ -173,9 +179,15 @@ const AboutPage: React.FC = () => {
             </div>
 
             <div className={`flex flex-wrap justify-center gap-8 min-h-[28rem] transition-opacity duration-300 ${isTabChanging ? 'opacity-0' : 'opacity-100'}`}>
-              {teamData.executiveBoard[activeTab]?.map(member => (
-                <TeamMemberCard key={member.name} member={member} />
-              ))}
+              {teamData.executiveBoard[activeTab]?.length > 0 ? (
+                teamData.executiveBoard[activeTab].map(member => (
+                  <TeamMemberCard key={member.name} member={member} />
+                ))
+              ) : (
+                <div className="flex items-center justify-center h-64 text-text-muted">
+                  <p className="text-lg">No members currently assigned to this team.</p>
+                </div>
+              )}
             </div>
           </>
         )}

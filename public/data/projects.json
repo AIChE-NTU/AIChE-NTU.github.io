@@ -1,0 +1,25 @@
+
+[
+    {
+        "id": "chember-winter-project-2025",
+        "title": "Winter Project: ChEmber",
+        "description": "Ignite your passion for chemical engineering this winter! ChEmber (Chemical Engineering + Ember) is a project initiative focused on sparking innovation during the semester break.",
+        "details": "The ChEmber Winter Project is designed to let students dive deep into a specific area of chemical engineering. This is a student-led initiative where teams can choose to tackle a problem in one of several key fields. Potential project streams include:\n- Process Simulation & Design: Model a complex chemical process using Aspen HYSYS or similar software.\n- Sustainability & LCA: Conduct a Life Cycle Assessment of a product or process.\n- Bioprocessing / Biotech: Design a bioreactor or a downstream purification process.\n- Chemical Engineering Machine Learning: Work on a small transfer learning project applied to chemical data.\n- Thermodynamics / Reaction Engineering: Investigate a complex reaction system or thermodynamic property model.\n- Control System: Design and simulate a process control strategy using MATLAB/Simulink.",
+        "imageUrl": "https://picsum.photos/seed/project1/400/300",
+        "tags": ["Process Simulation", "Sustainability", "Bioprocessing", "Machine Learning", "Thermodynamics", "Control Systems"],
+        "season": "Winter",
+        "releaseDate": "December 1, 2025",
+        "registrationUrl": "https://forms.cloud.microsoft/your-form-link"
+    },
+    {
+        "id": "checlipse-summer-project-2026",
+        "title": "Summer Project: ChEclipse",
+        "description": "Uncover new ideas this summer with ChEclipse (Chemical + Eclipse), a project initiative that brings light to challenging engineering problems.",
+        "details": "The ChEclipse Summer Project offers a chance to explore cutting-edge topics in chemical engineering in collaboration with faculty advisors. This initiative encourages students to tackle research-oriented or design-based challenges. Potential project fields for this summer include:\n- Cooling & Process Engineering: Design an energy-efficient cooling system for data centers or industrial processes.\n- Green Chemistry & Thermodynamics: Develop and model a process using green solvents or sustainable reaction pathways.\n- Bioengineering & Cooling: Explore bio-inspired cooling mechanisms or the thermal management of bioreactors.\n- Semiconductors, Materials and AI: Investigate new materials for semiconductor manufacturing or apply AI to predict material properties.",
+        "imageUrl": "https://picsum.photos/seed/project2/400/300",
+        "tags": ["Cooling", "Green Chemistry", "Bioengineering", "Semiconductors", "AI"],
+        "season": "Summer",
+        "releaseDate": "June 15, 2026",
+        "registrationUrl": "https://forms.cloud.microsoft/your-form-link"
+    }
+]

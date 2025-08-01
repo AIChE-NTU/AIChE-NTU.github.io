@@ -1,0 +1,42 @@
+
+[
+    {
+        "id": "aspen-hysys-workshop-2025",
+        "title": "Skills Workshop: Process Simulation with Aspen Hysys",
+        "description": "A hands-on workshop covering the fundamentals of process simulation, essential for any chemical engineering student.",
+        "details": "This workshop, run in partnership with our experienced faculty, will introduce you to one of the most powerful tools in the chemical industry: Aspen HYSYS. You will learn to build flowsheets, define components and fluid packages, simulate unit operations like reactors and distillation columns, and analyze results. This is a critical skill for process design projects and future internships.",
+        "date": "September 13, 2025",
+        "instructor": "NTU CCEB Professors",
+        "level": "Beginner",
+        "category": "Software Simulation",
+        "status": "Upcoming",
+        "imageUrl": "https://picsum.photos/seed/workshop1/400/300",
+        "registrationUrl": "https://forms.cloud.microsoft/your-form-link"
+    },
+    {
+        "id": "lca-hazop-workshop-2025",
+        "title": "Workshop: LCA or Hazard Management Tools",
+        "description": "Explore critical tools for modern chemical engineering, focusing on sustainability (LCA) or process safety (HAZOP/Aloha).",
+        "details": "This workshop will focus on a key area of modern engineering practice. Depending on faculty availability and student interest, we will either dive into Life Cycle Assessment (LCA) to evaluate the environmental impact of a process, or into Hazard Management tools like HAZOP and Aloha to analyze and mitigate process risks. Both are highly valuable skills for the conscious engineer.",
+        "date": "October 18, 2025",
+        "instructor": "NTU CCEB Professors",
+        "level": "Intermediate",
+        "category": "Process Safety",
+        "status": "Upcoming",
+        "imageUrl": "https://picsum.photos/seed/workshop2/400/300",
+        "registrationUrl": "https://forms.cloud.microsoft/your-form-link"
+    },
+    {
+        "id": "matlab-simulink-workshop-2026",
+        "title": "Workshop: MATLAB & Simulink for Chemical Engineers",
+        "description": "Learn how to use MATLAB and Simulink to model and solve chemical engineering problems, from reaction kinetics to process control.",
+        "details": "This workshop is designed to equip you with essential computational skills. Led by faculty or experienced seniors, the session will cover solving differential equations for reactor design, analyzing data, and building dynamic process models with Simulink. This is invaluable for coursework and advanced projects.",
+        "date": "February 7, 2026",
+        "instructor": "Faculty or Senior Students",
+        "level": "Beginner",
+        "category": "Software Simulation",
+        "status": "Upcoming",
+        "imageUrl": "https://picsum.photos/seed/workshop3/400/300",
+        "registrationUrl": ""
+    }
+]
