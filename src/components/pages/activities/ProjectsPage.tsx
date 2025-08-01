@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Spinner from '../../Spinner';
 import ProjectCard from '../../ProjectCard';
-import type { Project } from '../../../constants';
+import type { Project } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import { XIcon } from '../../Icons';
 
 const ProjectsPage: React.FC = () => {
@@ -15,7 +16,7 @@ const ProjectsPage: React.FC = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/data/projects.json');
+        const response = await fetch(getDataUrl('projects.json'));
         const data = await response.json();
         setProjects(data);
       } catch (error) {
@@ -92,3 +93,4 @@ const ProjectsPage: React.FC = () => {
 };
 
 export default ProjectsPage;
+

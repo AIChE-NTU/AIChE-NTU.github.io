@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import type { TeamMember, Professor } from '../../../constants';
+import type { TeamMember, Professor } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import { LinkedinIcon } from '../../Icons';
 import Spinner from '../../Spinner';
 
@@ -76,9 +77,9 @@ const AboutPage: React.FC = () => {
     const fetchData = async () => {
       try {
         const [teamRes, logoRes, profRes] = await Promise.all([
-            fetch('/data/team.json'),
-            fetch('/data/logo.json'),
-            fetch('/data/professors.json')
+            fetch(getDataUrl('team.json')),
+            fetch(getDataUrl('logo.json')),
+            fetch(getDataUrl('professors.json'))
         ]);
         const teamDataJson = await teamRes.json();
         const logoData = await logoRes.json();
@@ -244,4 +245,5 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+
 

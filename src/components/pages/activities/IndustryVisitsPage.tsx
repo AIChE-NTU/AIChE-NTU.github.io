@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Spinner from '../../Spinner';
 import ActivityCard from '../../ActivityCard';
-import type { Activity } from '../../../constants';
+import type { Activity } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 
 const IndustryVisitsPage: React.FC = () => {
   const [visits, setVisits] = useState<Activity[]>([]);
@@ -10,7 +11,7 @@ const IndustryVisitsPage: React.FC = () => {
   useEffect(() => {
     const fetchVisits = async () => {
       try {
-        const response = await fetch('/data/industry-visits.json');
+        const response = await fetch(getDataUrl('industry-visits.json'));
         const data = await response.json();
         setVisits(data);
       } catch (error) {
@@ -93,3 +94,4 @@ const IndustryVisitsPage: React.FC = () => {
 };
 
 export default IndustryVisitsPage;
+

@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Spinner from '../../Spinner';
 import WorkshopCard from '../../WorkshopCard';
-import type { Workshop } from '../../../constants';
+import type { Workshop } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import { XIcon } from '../../Icons';
 
 const WorkshopsPage: React.FC = () => {
@@ -14,7 +15,7 @@ const WorkshopsPage: React.FC = () => {
     useEffect(() => {
         const fetchWorkshops = async () => {
             try {
-                const response = await fetch('/data/workshops.json');
+                const response = await fetch(getDataUrl('workshops.json'));
                 const data = await response.json();
                 setWorkshops(data);
             } catch (error) {
@@ -81,3 +82,4 @@ const WorkshopsPage: React.FC = () => {
 };
 
 export default WorkshopsPage;
+

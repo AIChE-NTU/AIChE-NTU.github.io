@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import type { Project, Activity, Workshop } from '../../../constants';
+import type { Project, Activity, Workshop } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import { XIcon } from '../../Icons';
 import Spinner from '../../Spinner';
 
@@ -37,11 +38,11 @@ const CalendarPage: React.FC = () => {
       setIsLoading(true);
       try {
         const [projectsRes, activitiesRes, workshopsRes, visitsRes, competitionsRes] = await Promise.all([
-          fetch('/data/projects.json').then(res => res.json()),
-          fetch('/data/activities.json').then(res => res.json()),
-          fetch('/data/workshops.json').then(res => res.json()),
-          fetch('/data/industry-visits.json').then(res => res.json()),
-          fetch('/data/competitions.json').then(res => res.json())
+          fetch(getDataUrl('projects.json')).then(res => res.json()),
+          fetch(getDataUrl('activities.json')).then(res => res.json()),
+          fetch(getDataUrl('workshops.json')).then(res => res.json()),
+          fetch(getDataUrl('industry-visits.json')).then(res => res.json()),
+          fetch(getDataUrl('competitions.json')).then(res => res.json())
         ]);
         
         const parseDate = (dateString: string) => {
@@ -189,4 +190,5 @@ const CalendarPage: React.FC = () => {
 };
 
 export default CalendarPage;
+
 

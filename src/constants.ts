@@ -1,4 +1,10 @@
 
+// Helper function to get correct data URLs for GitHub Pages
+export const getDataUrl = (path: string): string => {
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}data/${path}`;
+};
+
 export interface NavLink {
   name: string;
   path: string;

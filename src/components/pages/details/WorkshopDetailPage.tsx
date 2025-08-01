@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import type { Workshop } from '../../../constants';
+import type { Workshop } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
 
 const WorkshopDetailPage: React.FC = () => {
@@ -13,7 +14,7 @@ const WorkshopDetailPage: React.FC = () => {
         const fetchWorkshop = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch('/data/workshops.json');
+                const response = await fetch(getDataUrl('workshops.json'));
                 const workshops: Workshop[] = await response.json();
                 const currentWorkshop = workshops.find(w => w.id === workshopId);
                 setWorkshop(currentWorkshop || null);
@@ -67,3 +68,4 @@ const WorkshopDetailPage: React.FC = () => {
 };
 
 export default WorkshopDetailPage;
+

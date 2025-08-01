@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Spinner from '../../Spinner';
 import ActivityCard from '../../ActivityCard';
-import type { Activity } from '../../../constants';
+import type { Activity } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 
 const CompetitionsPage: React.FC = () => {
   const [competitions, setCompetitions] = useState<Activity[]>([]);
@@ -10,7 +11,7 @@ const CompetitionsPage: React.FC = () => {
   useEffect(() => {
     const fetchCompetitions = async () => {
       try {
-        const response = await fetch('/data/competitions.json');
+        const response = await fetch(getDataUrl('competitions.json'));
         const data = await response.json();
         setCompetitions(data);
       } catch (error) {
@@ -93,3 +94,4 @@ const CompetitionsPage: React.FC = () => {
 };
 
 export default CompetitionsPage;
+

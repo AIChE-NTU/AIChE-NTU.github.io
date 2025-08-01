@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import type { Project } from '../../../constants';
+import type { Project } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import { getTagColor } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
 
@@ -14,7 +15,7 @@ const ProjectDetailPage: React.FC = () => {
         const fetchProject = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch('/data/projects.json');
+                const response = await fetch(getDataUrl('projects.json'));
                 const projects: Project[] = await response.json();
                 const currentProject = projects.find(p => p.id === projectId);
                 setProject(currentProject || null);
@@ -66,3 +67,4 @@ const ProjectDetailPage: React.FC = () => {
 };
 
 export default ProjectDetailPage;
+

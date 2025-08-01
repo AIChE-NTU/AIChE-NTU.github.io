@@ -7,6 +7,7 @@ import ActivityCard from '../../ActivityCard';
 import WorkshopCard from '../../WorkshopCard';
 import ArticleCard from '../../ArticleCard';
 import type { Project, Workshop, Activity, Article } from '../../../constants';
+import { getDataUrl } from '../../../constants';
 
 const HomePage: React.FC = () => {
     const [featuredProjects, setFeaturedProjects] = useState<Project[]>([]);
@@ -22,11 +23,11 @@ const HomePage: React.FC = () => {
             setIsLoading(true);
             try {
                 const [projectsRes, workshopsRes, activitiesRes, articlesRes, logoRes] = await Promise.all([
-                    fetch('/data/projects.json').then(res => res.json()),
-                    fetch('/data/workshops.json').then(res => res.json()),
-                    fetch('/data/activities.json').then(res => res.json()),
-                    fetch('/data/articles.json').then(res => res.json()),
-                    fetch('/data/logo.json').then(res => res.json())
+                    fetch(getDataUrl('projects.json')).then(res => res.json()),
+                    fetch(getDataUrl('workshops.json')).then(res => res.json()),
+                    fetch(getDataUrl('activities.json')).then(res => res.json()),
+                    fetch(getDataUrl('articles.json')).then(res => res.json()),
+                    fetch(getDataUrl('logo.json')).then(res => res.json())
                 ]);
 
                 setFeaturedProjects(projectsRes.slice(0, 2));

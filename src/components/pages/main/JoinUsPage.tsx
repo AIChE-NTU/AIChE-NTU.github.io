@@ -22,7 +22,7 @@ const JoinUsPage: React.FC = () => {
     useEffect(() => {
         const fetchAssets = async () => {
             try {
-                const response = await fetch('/data/assets.json');
+                const response = await fetch(getDataUrl('assets.json'));
                 const data = await response.json();
                 setAssets(data.joinUs);
             } catch (error) {
@@ -109,3 +109,4 @@ const JoinUsPage: React.FC = () => {
 };
 
 export default JoinUsPage;
+

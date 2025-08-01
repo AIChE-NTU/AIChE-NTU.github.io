@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import type { Activity } from '../../../constants';
+import type { Activity } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
 import { XIcon } from '../../Icons';
 
@@ -18,9 +19,9 @@ const ActivityDetailPage: React.FC = () => {
             try {
                 // Fetch all possible activity types
                 const [generalActivities, industryVisits, competitions] = await Promise.all([
-                    fetch('/data/activities.json').then(res => res.json()),
-                    fetch('/data/industry-visits.json').then(res => res.json()),
-                    fetch('/data/competitions.json').then(res => res.json())
+                    fetch(getDataUrl('activities.json')).then(res => res.json()),
+                    fetch(getDataUrl('industry-visits.json')).then(res => res.json()),
+                    fetch(getDataUrl('competitions.json')).then(res => res.json())
                 ]);
                 
                 const allActivities: Activity[] = [...generalActivities, ...industryVisits, ...competitions];
@@ -133,3 +134,4 @@ const ActivityDetailPage: React.FC = () => {
 };
 
 export default ActivityDetailPage;
+

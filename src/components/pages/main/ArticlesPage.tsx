@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Spinner from '../../Spinner';
-import type { Article } from '../../../constants';
+import type { Article } from '../../../constants'
+import { getDataUrl } from '../../../constants';
 import ArticleCard from '../../ArticleCard';
 
 const ArticlesPage: React.FC = () => {
@@ -12,7 +13,7 @@ const ArticlesPage: React.FC = () => {
     const fetchArticles = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('/data/articles.json');
+        const response = await fetch(getDataUrl('articles.json'));
         const data = await response.json();
         setArticles(data);
       } catch (error) {
@@ -50,3 +51,4 @@ const ArticlesPage: React.FC = () => {
 };
 
 export default ArticlesPage;
+
