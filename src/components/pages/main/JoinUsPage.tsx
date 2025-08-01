@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../../Card';
 import { ExternalLinkIcon } from '../../Icons';
 import Spinner from '../../Spinner';
+import { getDataUrl } from '../../../constants';
 
 interface JoinUsAssets {
     pageTitle: string;
