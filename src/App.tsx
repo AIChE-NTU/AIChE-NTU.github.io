@@ -2,20 +2,20 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import HomePage from './pages/main/HomePage';
-import AboutPage from './pages/main/AboutPage';
-import ArticlesPage from './pages/main/ArticlesPage';
-import CalendarPage from './pages/main/CalendarPage';
-import ContactPage from './pages/main/ContactPage';
-import JoinUsPage from './pages/main/JoinUsPage';
-import ProjectsPage from './pages/activities/ProjectsPage';
-import WorkshopsPage from './pages/activities/WorkshopsPage';
-import ActivitiesPage from './pages/activities/ActivitiesPage';
-import IndustryVisitsPage from './pages/activities/IndustryVisitsPage';
-import CompetitionsPage from './pages/activities/CompetitionsPage';
-import ProjectDetailPage from './pages/details/ProjectDetailPage';
-import WorkshopDetailPage from './pages/details/WorkshopDetailPage';
-import ActivityDetailPage from './pages/details/ActivityDetailPage';
+import HomePage from './components/pages/main/HomePage';
+import AboutPage from './components/pages/main/AboutPage';
+import ArticlesPage from './components/pages/main/ArticlesPage';
+import CalendarPage from './components/pages/main/CalendarPage';
+import ContactPage from './components/pages/main/ContactPage';
+import JoinUsPage from './components/pages/main/JoinUsPage';
+import ProjectsPage from './components/pages/activities/ProjectsPage';
+import WorkshopsPage from './components/pages/activities/WorkshopsPage';
+import ActivitiesPage from './components/pages/activities/ActivitiesPage';
+import IndustryVisitsPage from './components/pages/activities/IndustryVisitsPage';
+import CompetitionsPage from './components/pages/activities/CompetitionsPage';
+import ProjectDetailPage from './components/pages/details/ProjectDetailPage';
+import WorkshopDetailPage from './components/pages/details/WorkshopDetailPage';
+import ActivityDetailPage from './components/pages/details/ActivityDetailPage';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 const App: React.FC = () => {
