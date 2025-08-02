@@ -1,9 +1,19 @@
-
 // Helper function to get correct data URLs for GitHub Pages
 export const getDataUrl = (path: string): string => {
-  // Use the base URL from Vite's environment or default to root
-  const base = '/homepage.github.io/';
-  return `${base}data/${path}`;
+  // Debug: Log what URL we're trying to fetch
+  let url;
+  
+  // For local development, use absolute URLs
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    url = `${window.location.origin}/data/${path}`;
+  } else {
+    // For production GitHub Pages
+    const base = '/homepage.github.io/';
+    url = `${base}data/${path}`;
+  }
+  
+  console.log('Fetching data from:', url);
+  return url;
 };
 
 export interface NavLink {
