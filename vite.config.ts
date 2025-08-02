@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command, mode }) => ({
   plugins: [react()],
   // Always use the GitHub Pages base path for production builds
-  base: command === 'build' ? '/homepage.github.io/' : '/',
+  base: command === 'build' ? '/AIChE-NTU/' : '/',
   server: {
     port: 3000
   },
