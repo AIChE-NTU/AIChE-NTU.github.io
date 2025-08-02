@@ -8,7 +8,7 @@ export const getDataUrl = (path: string): string => {
     url = `${window.location.origin}/data/${path}`;
   } else {
     // For production GitHub Pages
-    const base = '/AIChE-NTU/';
+    const base = '/AIChE-NTU.github.io/';
     url = `${base}data/${path}`;
   }
   
