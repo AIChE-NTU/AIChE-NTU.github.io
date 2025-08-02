@@ -33,7 +33,7 @@ jobs:
         run: npm install
         
       - name: Build
-        run: npx tsc && npx vite build --mode production --base /homepage.github.io/
+        run: npx tsc && npx vite build --mode production
         
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
