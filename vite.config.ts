@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => ({
   plugins: [react()],
-  // Use repository name path until repo is renamed to aiche-ntu.github.io
-  base: command === 'build' ? '/AIChE-NTU.github.io/' : '/',
+  // For HashRouter deployment, use root base path
+  base: '/',
   server: {
     port: 3000
   },
