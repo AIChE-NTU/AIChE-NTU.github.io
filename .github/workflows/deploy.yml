@@ -26,17 +26,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'  # 🔧 Add npm caching
+          node-version: 'lts/*'  # 🔧 Always use latest LTS Node.js
+          cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci  # 🔧 Use npm ci instead of npm install (more reliable in CI)
+        run: npm ci
         
       - name: Build
-        run: npx tsc && npx vite build --mode production  # 🔧 Use npx instead of npm run
+        run: npx tsc && npx vite build --mode production
         
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4  # 🔧 Updated to v4
         with:
           path: './dist'
 
@@ -51,4 +51,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4  # 🔧 Latest version
