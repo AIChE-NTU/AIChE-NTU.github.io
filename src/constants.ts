@@ -7,9 +7,8 @@ export const getDataUrl = (path: string): string => {
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     url = `${window.location.origin}/data/${path}`;
   } else {
-    // For production GitHub Pages
-    const base = '/AIChE-NTU.github.io/';
-    url = `${base}data/${path}`;
+    // For production GitHub Pages (root site)
+    url = `/data/${path}`;
   }
   
   console.log('Fetching data from:', url);
