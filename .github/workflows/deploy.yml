@@ -36,8 +36,12 @@ jobs:
         run: |
           rm -rf dist
           npx tsc && npx vite build --mode production --logLevel info
-          echo "Build complete. Contents of dist/index.html:"
-          head -20 dist/index.html
+          echo "=== Build complete ==="
+          echo "Contents of dist directory:"
+          ls -la dist/
+          echo "=== Complete dist/index.html file ==="
+          cat dist/index.html
+          echo "=== End of index.html ==="
         env:
           NODE_ENV: production
         
