@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex flex-grow justify-evenly items-center">
+                    <nav className="hidden lg:flex flex-grow justify-evenly items-center">
                         {navLinks.map((link) => (
                             !link.children ? (
                                 <NavLink key={link.name} to={link.path} className={linkClasses} style={({ isActive }) => isActive ? activeLinkStyle : {}}>
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                         ))}
                     </nav>
 
-                    <div className="hidden md:flex items-center flex-shrink-0 gap-4">
+                    <div className="hidden lg:flex items-center flex-shrink-0 gap-4">
                          <Link to="/join" className="bg-primary text-white font-bold py-2 px-5 rounded-full hover:bg-primary-focus transition-all duration-300 transform hover:scale-105">
                             Join Us!
                         </Link>
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                         </button>
                     </div>
 
-                    <div className="md:hidden flex items-center gap-4">
+                    <div className="lg:hidden flex items-center gap-4">
                         <button onClick={toggleTheme} className="text-text-muted hover:text-primary transition-colors" aria-label="Toggle theme">
                             {theme === 'dark' ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
                         </button>
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden bg-surface">
+                <div className="lg:hidden bg-surface">
                     <nav className="flex flex-col items-center px-4 pt-2 pb-4 space-y-1">
                         {navLinks.map((link) => (
                             !link.children ? (
