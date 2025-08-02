@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getDataUrl } from '../constants';
 import { GithubIcon, LinkedinIcon, MailIcon, TelegramIcon, InstagramIcon } from './Icons';
 
 interface Partner {
@@ -13,7 +14,7 @@ const Footer: React.FC = () => {
     useEffect(() => {
         const fetchPartners = async () => {
             try {
-                const response = await fetch('./data/logo.json');
+                const response = await fetch(getDataUrl('logo.json'));
                 const data = await response.json();
                 setPartners(data.partners || []);
             } catch (error) {

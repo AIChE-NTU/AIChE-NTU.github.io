@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { navLinks } from '../constants';
+import { navLinks, getDataUrl } from '../constants';
 import { useTheme } from '../contexts/ThemeContext';
 import { MenuIcon, XIcon, SunIcon, MoonIcon, ChevronDownIcon } from './Icons';
 
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     useEffect(() => {
         const fetchLogo = async () => {
             try {
-                const response = await fetch('./data/logo.json');
+                const response = await fetch(getDataUrl('logo.json'));
                 const data = await response.json();
                 if (data.siteLogoUrl) {
                     setLogoUrl(data.siteLogoUrl);
