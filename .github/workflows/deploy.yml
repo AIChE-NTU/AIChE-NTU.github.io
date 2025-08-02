@@ -27,12 +27,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'  # 🔧 Add npm caching
           
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # 🔧 Use npm ci instead of npm install (more reliable in CI)
         
       - name: Build
-        run: npm run build
+        run: npx tsc && npx vite build --mode production  # 🔧 Use npx instead of npm run
         
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
