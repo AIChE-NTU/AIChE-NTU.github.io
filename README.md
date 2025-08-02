@@ -165,3 +165,4 @@ This table shows you which file to edit to update a specific part of the website
 *   **File:** `data/assets.json`
 *   **How it Works:** The "Join Us" page is built entirely from the content of this file. This makes it easy to change instructions, links, or titles without touching any code.
 *   **Process:** All text and links for the step-by-step "Join Us" page are in this file. You can easily update the description for each step or change the Microsoft Form link (`membershipProofFormUrl`) here.
+Site last updated: Sat, Aug  2, 2025  9:49:37 PM
