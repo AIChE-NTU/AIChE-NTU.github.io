@@ -30,13 +30,13 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
+        run: npm install  # 🔧 Changed from npm ci to npm install
         
       - name: Build
-        run: npx tsc && npx vite build --mode production
+        run: npx tsc && npx vite build --mode production ----base /homepage.github.io/
         
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3  # 🔧 Fixed: v3 is the latest
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
@@ -51,4 +51,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4  # 🔧 v4 exists for deploy-pages
+        uses: actions/deploy-pages@v4
