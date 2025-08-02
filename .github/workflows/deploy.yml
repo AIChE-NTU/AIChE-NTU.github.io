@@ -30,10 +30,10 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm install  # 🔧 Changed from npm ci to npm install
+        run: npm install
         
       - name: Build
-        run: npx tsc && npx vite build --mode production ----base /homepage.github.io/
+        run: npx tsc && npx vite build --mode production --base /homepage.github.io/
         
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
