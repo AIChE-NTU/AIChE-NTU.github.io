@@ -16,6 +16,7 @@ import CompetitionsPage from './components/pages/activities/CompetitionsPage';
 import ProjectDetailPage from './components/pages/details/ProjectDetailPage';
 import WorkshopDetailPage from './components/pages/details/WorkshopDetailPage';
 import ActivityDetailPage from './components/pages/details/ActivityDetailPage';
+import ArticleDetailPage from './components/pages/details/ArticleDetailPage';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 const App: React.FC = () => {
@@ -27,6 +28,7 @@ const App: React.FC = () => {
             <Route index element={<HomePage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="articles" element={<ArticlesPage />} />
+            <Route path="articles/:id" element={<ArticleDetailPage />} />
             
             <Route path="projects" element={<ProjectsPage />} />
             <Route path="projects/tag/:tag" element={<ProjectsPage />} />

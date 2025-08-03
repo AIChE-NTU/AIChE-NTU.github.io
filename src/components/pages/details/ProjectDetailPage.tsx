@@ -16,9 +16,41 @@ const ProjectDetailPage: React.FC = () => {
             setIsLoading(true);
             try {
                 const response = await fetch(getDataUrl('projects.json'));
-                const projects: Project[] = await response.json();
-                const currentProject = projects.find(p => p.id === projectId);
-                setProject(currentProject || null);
+                const data = await response.json();
+                
+                let foundProject = null;
+                
+                // Search in chember (winter) projects
+                if (data.chember && data.chember.projects) {
+                    foundProject = data.chember.projects.find((p: any) => p.id === projectId);
+                    if (foundProject) {
+                        foundProject = {
+                            ...foundProject,
+                            season: 'Winter',
+                            duration: data.chember.duration,
+                            parentId: data.chember.id,
+                            parentTitle: data.chember.title,
+                            details: foundProject.description || 'No detailed information available.'
+                        };
+                    }
+                }
+                
+                // Search in checlipse (summer) projects if not found in winter
+                if (!foundProject && data.checlipse && data.checlipse.projects) {
+                    foundProject = data.checlipse.projects.find((p: any) => p.id === projectId);
+                    if (foundProject) {
+                        foundProject = {
+                            ...foundProject,
+                            season: 'Summer',
+                            duration: data.checlipse.duration,
+                            parentId: data.checlipse.id,
+                            parentTitle: data.checlipse.title,
+                            details: foundProject.description || 'No detailed information available.'
+                        };
+                    }
+                }
+                
+                setProject(foundProject || null);
             } catch (error) {
                 console.error("Failed to fetch project details:", error);
                 setProject(null);
@@ -38,10 +70,10 @@ const ProjectDetailPage: React.FC = () => {
             label: 'Skills & Topics',
             value: (
                 <div className="flex flex-wrap gap-2 mt-1">
-                    {project.tags.map(tag => (
-                        <Link key={tag} to={`/projects/tag/${encodeURIComponent(tag)}`}>
-                            <span className={`text-sm font-semibold px-3 py-1 rounded-full cursor-pointer hover:ring-2 hover:ring-primary/50 ${getTagColor(tag)}`}>
-                                {tag}
+                    {project.tags.map((tag, index) => (
+                        <Link key={`${tag.name}-${index}`} to={`/projects/tag/${encodeURIComponent(tag.name)}`}>
+                            <span className={`text-sm font-semibold px-3 py-1 rounded-full cursor-pointer hover:ring-2 hover:ring-primary/50 ${tag.color || getTagColor(tag.name)}`}>
+                                {tag.name}
                             </span>
                         </Link>
                     ))}

@@ -1,0 +1,240 @@
+{
+  "contact": {
+    "hero": {
+      "title": "Get In Touch",
+      "subtitle": "Connect with the AIChE NTU Student Chapter. We're here to collaborate and innovate."
+    },
+    "form": {
+      "title": "Send us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you.",
+      "inquiryTypes": [
+        {
+          "value": "general",
+          "label": "General Inquiry"
+        },
+        {
+          "value": "partnership",
+          "label": "Partnership & Sponsorship"
+        },
+        {
+          "value": "membership",
+          "label": "Membership Information"
+        },
+        {
+          "value": "events",
+          "label": "Events & Workshops"
+        }
+      ]
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "subtitle": "Reach out to us through any of the channels below.",
+      "contacts": [
+        {
+          "title": "General Inquiries",
+          "description": "For any general questions",
+          "email": "contact@aichentu.org",
+          "icon": "mail"
+        },
+        {
+          "title": "Partnerships",
+          "description": "For collaboration opportunities",
+          "email": "partnerships@aichentu.org",
+          "icon": "briefcase"
+        }
+      ],
+      "location": {
+        "title": "Location",
+        "description": "Find us on campus",
+        "address": "Nanyang Technological University\nSchool of Chemical & Biomedical Engineering"
+      }
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        {
+          "text": "Join Our Chapter",
+          "url": "/join"
+        },
+        {
+          "text": "View Activities",
+          "url": "/activities"
+        },
+        {
+          "text": "Workshops",
+          "url": "/workshops"
+        },
+        {
+          "text": "About Us",
+          "url": "/about"
+        }
+      ]
+    }
+  },
+  "calendar": {
+    "hero": {
+      "title": "Club Calendar",
+      "subtitle": "Stay up to date with all our events, workshops, and deadlines. Click on any event to view details."
+    },
+    "monthlyEvents": {
+      "title": "Events in {month}",
+      "emptyMessage": {
+        "main": "No events scheduled for this month",
+        "sub": "Check other months or stay tuned for updates!"
+      }
+    },
+    "colorLegend": [
+      {
+        "color": "green",
+        "label": "Activities"
+      },
+      {
+        "color": "purple",
+        "label": "Workshops"
+      },
+      {
+        "color": "blue",
+        "label": "Projects"
+      },
+      {
+        "color": "yellow",
+        "label": "Visits"
+      },
+      {
+        "color": "red",
+        "label": "Competitions"
+      },
+      {
+        "color": "indigo",
+        "label": "Articles"
+      }
+    ]
+  },
+  "about": {
+    "hero": {
+      "title": "About AIChE NTU",
+      "subtitle": "Learn more about our mission, vision, and the passionate team behind our student chapter."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To advance the chemical engineering profession and its practitioners by fostering lifelong learning, leadership development, and professional excellence among NTU students."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the premier chemical engineering student organization that bridges academia and industry, creating future leaders in chemical engineering."
+    }
+  },
+  "join": {
+    "hero": {
+      "title": "Join AIChE NTU",
+      "subtitle": "Become part of our vibrant community of chemical engineering students and unlock opportunities for growth, networking, and innovation."
+    },
+    "benefits": {
+      "title": "Membership Benefits",
+      "items": [
+        {
+          "title": "Professional Development",
+          "description": "Access to workshops, seminars, and industry talks"
+        },
+        {
+          "title": "Networking Opportunities",
+          "description": "Connect with peers, alumni, and industry professionals"
+        },
+        {
+          "title": "Research Projects",
+          "description": "Participate in cutting-edge research initiatives"
+        },
+        {
+          "title": "Career Support",
+          "description": "Resume reviews, interview prep, and job placement assistance"
+        }
+      ]
+    },
+    "howToJoin": {
+      "title": "How to Join",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Attend an Info Session",
+          "description": "Come to one of our recruitment events"
+        },
+        {
+          "step": 2,
+          "title": "Fill Out Application",
+          "description": "Complete our membership application form"
+        },
+        {
+          "step": 3,
+          "title": "Pay Membership Dues",
+          "description": "Submit your annual membership fee"
+        },
+        {
+          "step": 4,
+          "title": "Welcome to AIChE!",
+          "description": "Start participating in our activities and events"
+        }
+      ]
+    }
+  },
+  "activities": {
+    "hero": {
+      "title": "Our Activities",
+      "subtitle": "From industry talks to social gatherings, explore the events and activities that define our chapter."
+    },
+    "sections": {
+      "upcoming": {
+        "title": "Upcoming Activities",
+        "emptyMessage": "No upcoming activities scheduled. Check back soon!"
+      },
+      "past": {
+        "title": "Past Activities", 
+        "emptyMessage": "No past activities to show yet."
+      }
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "description": "Explore the innovative chemical engineering projects led by our members, organized by season.",
+    "summerTabLabel": "Summer Projects",
+    "winterTabLabel": "Winter Projects",
+    "filteredByLabel": "Filtered by Tag",
+    "clearFilterLabel": "Clear Filter",
+    "emptyMessage": "No projects available for the selected criteria."
+  },
+  "workshops": {
+    "title": "Technical Workshops",
+    "description": "Enhance your skills with hands-on workshops led by industry experts",
+    "categoryTitle": "Explore by Category",
+    "sections": {
+      "upcoming": {
+        "title": "Upcoming Workshops",
+        "emptyMessage": "No upcoming workshops scheduled. Check back soon!"
+      },
+      "past": {
+        "title": "Past Workshops",
+        "emptyMessage": "No past workshops to show yet."
+      }
+    }
+  },
+  "competitions": {
+    "title": "Competitions",
+    "description": "Test your skills, challenge your peers, and win prizes in our exciting chemical engineering competitions.",
+    "upcomingTitle": "Upcoming Competitions",
+    "pastTitle": "Past Competitions",
+    "noUpcomingMessage": "No upcoming competitions scheduled. Check back soon!",
+    "noPastMessage": "No past competitions to show yet."
+  },
+  "industryVisits": {
+    "title": "Industry Visits",
+    "description": "Gain firsthand experience and see chemical engineering in action with our guided tours of manufacturing plants and research facilities.",
+    "upcomingTitle": "Upcoming Visits",
+    "pastTitle": "Past Visits",
+    "noUpcomingMessage": "No upcoming industry visits scheduled. Check back soon!",
+    "noPastMessage": "No past industry visits to show yet."
+  },
+  "articles": {
+    "title": "Articles & Publications",
+    "description": "Read articles and publications from our student chapter members and faculty.",
+    "emptyMessage": "No articles to display at this moment."
+  }
+}

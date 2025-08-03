@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#14b8a6"/>
-  <text x="16" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">A</text>
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#14b8a6" stroke="#0f766e" stroke-width="2"/>
+  
+  <!-- Chemical flask/beaker -->
+  <path d="M12 8 L20 8 L18 14 L22 22 L10 22 L14 14 Z" fill="white" stroke="#0f766e" stroke-width="1"/>
+  
+  <!-- Liquid in flask -->
+  <path d="M11 20 L21 20 L18.5 16 L13.5 16 Z" fill="#06b6d4"/>
+  
+  <!-- AIChE text (small) -->
+  <text x="16" y="29" font-family="Arial, sans-serif" font-size="6" font-weight="bold" text-anchor="middle" fill="white">AIChE</text>
 </svg>

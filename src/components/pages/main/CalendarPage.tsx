@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import type { Project, Activity, Workshop } from '../../../constants'
@@ -22,35 +21,62 @@ const CalendarPage: React.FC = () => {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null);
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [pageConfig, setPageConfig] = useState<any>(null);
 
-  const todayDate = new Date();
-  const year = todayDate.getFullYear();
-  const month = todayDate.getMonth();
-  const dayOfMonth = todayDate.getDate();
+  const today = new Date();
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const todayDay = today.getDate();
+  const todayMonth = today.getMonth();
+  const todayYear = today.getFullYear();
 
-  const monthName = todayDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+  const monthName = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
   
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const startingDayOfWeek = new Date(year, month, 1).getDay();
+
+  const goToPreviousMonth = () => {
+    setCurrentDate(new Date(year, month - 1, 1));
+  };
+
+  const goToNextMonth = () => {
+    setCurrentDate(new Date(year, month + 1, 1));
+  };
+
+  const goToToday = () => {
+    setCurrentDate(new Date());
+  };
 
   useEffect(() => {
     const fetchEvents = async () => {
       setIsLoading(true);
       try {
-        const [projectsRes, activitiesRes, workshopsRes, visitsRes, competitionsRes] = await Promise.all([
+        const [projectsRes, activitiesRes, workshopsRes, visitsRes, competitionsRes, pagesRes] = await Promise.all([
           fetch(getDataUrl('projects.json')).then(res => res.json()),
           fetch(getDataUrl('activities.json')).then(res => res.json()),
           fetch(getDataUrl('workshops.json')).then(res => res.json()),
           fetch(getDataUrl('industry-visits.json')).then(res => res.json()),
-          fetch(getDataUrl('competitions.json')).then(res => res.json())
+          fetch(getDataUrl('competitions.json')).then(res => res.json()),
+          fetch(getDataUrl('pages.json')).then(res => res.json()).catch(() => null)
         ]);
+        
+        // Set page configuration
+        setPageConfig(pagesRes?.calendar || null);
+        
+        // Ensure all responses are arrays
+        const projects = Array.isArray(projectsRes) ? projectsRes : [];
+        const activities = Array.isArray(activitiesRes) ? activitiesRes : [];
+        const workshops = Array.isArray(workshopsRes) ? workshopsRes : [];
+        const visits = Array.isArray(visitsRes) ? visitsRes : [];
+        const competitions = Array.isArray(competitionsRes) ? competitionsRes : [];
         
         const parseDate = (dateString: string) => {
             // Add a specific time to avoid timezone issues making it the previous day
             return new Date(`${dateString} 12:00:00`);
         }
 
-        const projectEvents: CalendarEvent[] = projectsRes
+        const projectEvents: CalendarEvent[] = projects
             .filter((p: Project) => p.releaseDate)
             .map((p: Project) => {
                 const date = parseDate(p.releaseDate!);
@@ -62,7 +88,7 @@ const CalendarPage: React.FC = () => {
                 };
             });
 
-        const activityEvents: CalendarEvent[] = activitiesRes.map((a: Activity) => {
+        const activityEvents: CalendarEvent[] = activities.map((a: Activity) => {
             const date = parseDate(a.date);
             return {
                 id: a.id, day: date.getDate(), month: date.getMonth(), year: date.getFullYear(),
@@ -72,7 +98,7 @@ const CalendarPage: React.FC = () => {
             };
         });
         
-        const visitEvents: CalendarEvent[] = visitsRes.map((a: Activity) => {
+        const visitEvents: CalendarEvent[] = visits.map((a: Activity) => {
             const date = parseDate(a.date);
             return {
                 id: a.id, day: date.getDate(), month: date.getMonth(), year: date.getFullYear(),
@@ -82,7 +108,7 @@ const CalendarPage: React.FC = () => {
             };
         });
         
-        const competitionEvents: CalendarEvent[] = competitionsRes.map((a: Activity) => {
+        const competitionEvents: CalendarEvent[] = competitions.map((a: Activity) => {
             const date = parseDate(a.date);
             return {
                 id: a.id, day: date.getDate(), month: date.getMonth(), year: date.getFullYear(),
@@ -92,7 +118,7 @@ const CalendarPage: React.FC = () => {
             };
         });
 
-        const workshopEvents: CalendarEvent[] = workshopsRes.map((w: Workshop) => {
+        const workshopEvents: CalendarEvent[] = workshops.map((w: Workshop) => {
             const date = parseDate(w.date);
             return {
                 id: w.id, day: date.getDate(), month: date.getMonth(), year: date.getFullYear(),
@@ -121,17 +147,18 @@ const CalendarPage: React.FC = () => {
     if (day === null) {
       return <div key={`blank-${index}`} className="border-t border-r border-slate-200 dark:border-slate-700"></div>;
     }
-    const isToday = day === dayOfMonth;
+    
+    const isToday = day === todayDay && month === todayMonth && year === todayYear;
     const dayEvents = currentMonthEvents.filter(e => e.day === day);
     
     return (
-      <div key={day} className="border-t border-r border-slate-200 dark:border-slate-700 p-2 min-h-[140px] flex flex-col gap-1">
-        <span className={`font-bold w-8 h-8 flex items-center justify-center rounded-full self-start ${isToday ? 'bg-primary text-white shadow-lg' : ''}`}>
+      <div key={day} className="border-t border-r border-slate-200 dark:border-slate-700 p-3 min-h-[140px] flex flex-col gap-2">
+        <span className={`font-bold w-8 h-8 flex items-center justify-center rounded-full self-start text-lg ${isToday ? 'bg-primary text-white shadow-lg' : ''}`}>
           {day}
         </span>
-        <div className="flex-grow overflow-y-auto space-y-1">
+        <div className="flex-grow overflow-y-auto space-y-2">
           {dayEvents.map((event, eventIndex) => (
-            <button key={eventIndex} onClick={() => setSelectedEvent(event)} className={`w-full p-1 rounded-md text-xs text-left ${event.color} hover:ring-2 hover:ring-primary`}>
+            <button key={eventIndex} onClick={() => setSelectedEvent(event)} className={`w-full p-2 rounded-md text-sm text-left transition-all duration-200 ${event.color} hover:ring-2 hover:ring-primary hover:scale-105`}>
               <p className="font-semibold whitespace-normal break-words">{event.title}</p>
             </button>
           ))}
@@ -146,20 +173,37 @@ const CalendarPage: React.FC = () => {
     <>
       <div className="space-y-12">
           <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-text-main">Club Calendar</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-text-main">
+                {pageConfig?.hero?.title || "Club Calendar"}
+              </h1>
               <p className="mt-4 text-lg text-text-muted max-w-3xl mx-auto">
-                  Stay up to date with all our events, workshops, and deadlines.
+                  {pageConfig?.hero?.subtitle || "Stay up to date with all our events, workshops, and deadlines."}
               </p>
           </div>
           
           <div className="bg-surface rounded-lg shadow-xl overflow-hidden border border-slate-200 dark:border-slate-700">
-              <div className="flex justify-between items-center p-4 bg-surface-alt dark:bg-slate-700">
-                  <h2 className="text-2xl font-bold text-text-main">{monthName}</h2>
+              <div className="flex justify-between items-center p-6 bg-surface-alt dark:bg-slate-700">
+                  <h2 className="text-3xl font-bold text-text-main">{monthName}</h2>
+                  <div className="flex items-center gap-4">
+                      <button onClick={goToPreviousMonth} className="p-3 bg-primary text-white rounded-lg hover:bg-primary-focus transition-colors shadow-md hover:shadow-lg">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                          </svg>
+                      </button>
+                      <button onClick={goToToday} className="px-4 py-3 bg-slate-200 dark:bg-slate-600 text-text-main rounded-lg hover:bg-slate-300 dark:hover:bg-slate-500 transition-colors font-medium shadow-md hover:shadow-lg">
+                          Today
+                      </button>
+                      <button onClick={goToNextMonth} className="p-3 bg-primary text-white rounded-lg hover:bg-primary-focus transition-colors shadow-md hover:shadow-lg">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                      </button>
+                  </div>
                   {isLoading && <div className="flex items-center gap-2 text-text-muted"><Spinner /><p>Loading events...</p></div>}
               </div>
               <div className="grid grid-cols-7 border-l border-slate-200 dark:border-slate-700">
                   {weekDays.map(day => (
-                      <div key={day} className="text-center font-bold p-3 bg-surface-alt dark:bg-slate-700/50 border-r border-b border-slate-200 dark:border-slate-700 text-text-muted">{day}</div>
+                      <div key={day} className="text-center font-bold p-4 bg-surface-alt dark:bg-slate-700/50 border-r border-b border-slate-200 dark:border-slate-700 text-text-muted text-lg">{day}</div>
                   ))}
                   {dayCells}
               </div>
@@ -170,17 +214,19 @@ const CalendarPage: React.FC = () => {
       {selectedEvent && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={() => setSelectedEvent(null)}>
             <div className="bg-surface rounded-lg shadow-2xl max-w-lg w-full p-8 relative" onClick={(e) => e.stopPropagation()}>
-                <button onClick={() => setSelectedEvent(null)} className="absolute top-4 right-4 text-text-muted hover:text-primary">
+                <button onClick={() => setSelectedEvent(null)} className="absolute top-4 right-4 text-text-muted hover:text-text-main">
                     <XIcon className="w-6 h-6" />
                 </button>
-                <span className={`inline-block px-3 py-1 text-sm font-semibold rounded-full mb-4 ${selectedEvent.color}`}>
+                <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 ${selectedEvent.color}`}>
                     {selectedEvent.type}
-                </span>
-                <h2 className="text-3xl font-bold text-text-main mb-2">{selectedEvent.title}</h2>
-                <p className="text-text-muted mb-4 font-semibold">{new Date(selectedEvent.year, selectedEvent.month, selectedEvent.day).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                <p className="text-text-muted mb-8">{selectedEvent.description}</p>
-                <Link to={selectedEvent.path} onClick={() => setSelectedEvent(null)} className="w-full text-center py-3 bg-primary text-white font-bold rounded-md hover:bg-primary-focus transition-all duration-300 block">
+                </div>
+                <h3 className="text-2xl font-bold text-text-main mb-4">{selectedEvent.title}</h3>
+                <p className="text-text-muted mb-6">{selectedEvent.description}</p>
+                <Link to={selectedEvent.path} className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-focus transition-colors font-medium">
                     View Details
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                 </Link>
             </div>
         </div>
@@ -190,5 +236,3 @@ const CalendarPage: React.FC = () => {
 };
 
 export default CalendarPage;
-
-

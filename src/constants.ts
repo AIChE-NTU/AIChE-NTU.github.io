@@ -1,18 +1,12 @@
 // Helper function to get correct data URLs for GitHub Pages
 export const getDataUrl = (path: string): string => {
-  // Debug: Log what URL we're trying to fetch
-  let url;
-  
   // For local development, use absolute URLs
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    url = `${window.location.origin}/data/${path}`;
+    return `${window.location.origin}/data/${path}`;
   } else {
     // For production GitHub Pages with HashRouter
-    url = `/data/${path}`;
+    return `/data/${path}`;
   }
-  
-  console.log('Fetching data from:', url);
-  return url;
 };
 
 export interface NavLink {
@@ -40,16 +34,77 @@ export const navLinks: NavLink[] = [
   { name: 'Contact Us', path: '/contact' },
 ];
 
+export interface Tag {
+  name: string;
+  color: string;
+}
+
+export interface TagGroup {
+  technical: Tag[];
+  course: Tag[];
+  career: Tag[];
+  skills: Tag[];
+}
+
+export interface ProjectData {
+  id: string;
+  title: string;
+  description: string;
+  tags: TagGroup;
+}
+
+export interface ProjectSection {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  season: 'winter' | 'summer';
+  duration: string;
+  releaseDate: string;
+  projects: ProjectData[];
+}
+
+export interface ProjectsData {
+  chember: ProjectSection;
+  checlipse: ProjectSection;
+}
+
+export interface ExpandedProject {
+  id: string;
+  title: string;
+  description: string;
+  season: 'winter' | 'summer';
+  duration: string;
+  parentTitle: string;
+  tags: TagGroup;
+}
+
+// Legacy interfaces for backward compatibility
+export interface SubProject {
+  title: string;
+  description: string;
+  tags: Array<{
+    name: string;
+    color: string;
+  }>;
+}
+
 export interface Project {
   id: string;
   title: string;
   description: string;
   details: string;
   imageUrl: string;
-  tags: string[];
+  tags: Array<{
+    name: string;
+    color: string;
+  }>;
   season: 'Summer' | 'Winter';
+  duration?: string;
   releaseDate?: string;
   registrationUrl?: string;
+  subProjects?: SubProject[];
+  comingSoon?: boolean;
 }
 
 export interface Workshop {
@@ -61,7 +116,7 @@ export interface Workshop {
     instructor: string;
     level: 'Beginner' | 'Intermediate' | 'Advanced';
     category: string;
-    status: 'Upcoming' | 'Past';
+    status: 'Upcoming' | 'Completed';
     imageUrl: string;
     registrationUrl?: string;
 }
@@ -87,12 +142,17 @@ export interface Activity {
 }
 
 export interface Article {
+    id: string;
     title: string;
     author: string;
     publicationDate: string;
     summary: string;
+    content: string;
     imageUrl: string;
-    link: string;
+    category: string;
+    readTime: string;
+    tags: string[];
+    link?: string;
 }
 
 export interface Professor {

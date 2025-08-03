@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getDataUrl } from '../constants';
-import { GithubIcon, LinkedinIcon, MailIcon, TelegramIcon, InstagramIcon } from './Icons';
+import SocialContacts from './SocialContacts';
 
 interface Partner {
   name: string;
@@ -25,13 +25,13 @@ const Footer: React.FC = () => {
     }, []);
 
     return (
-        <footer className="bg-surface shadow-inner mt-12 border-t border-slate-200 dark:border-slate-700">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <footer className="bg-surface shadow-inner mt-12 border-t border-slate-200 dark:border-slate-700 w-full">
+            <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
                 {/* Collaborators Section */}
                 {partners.length > 0 && (
-                    <div className="mb-12">
+                    <div className="mb-12 w-full">
                         <h3 className="text-center text-xl font-bold text-text-main mb-8">Our Collaborators</h3>
-                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 items-center justify-center gap-x-8 gap-y-6">
+                        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 items-center justify-center gap-x-4 gap-y-6 max-w-none">
                             {partners.map(partner => (
                                 <a key={partner.name} href={partner.website} target="_blank" rel="noopener noreferrer" title={partner.name} className="flex justify-center transition-transform duration-300 hover:scale-110">
                                     <img 
@@ -46,25 +46,9 @@ const Footer: React.FC = () => {
                 )}
                 
                 {/* Footer Bottom */}
-                <div className="border-t border-slate-200 dark:border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-text-muted text-sm">&copy; {new Date().getFullYear()} AIChE NTU Student Chapter. All Rights Reserved.</p>
-                    <div className="flex gap-6">
-                        <a href="#" aria-label="GitHub" className="text-text-muted hover:text-primary transition-colors">
-                           <GithubIcon />
-                        </a>
-                        <a href="#" aria-label="LinkedIn" className="text-text-muted hover:text-primary transition-colors">
-                            <LinkedinIcon />
-                        </a>
-                        <a href="mailto:contact@aichentu.org" aria-label="Email" className="text-text-muted hover:text-primary transition-colors">
-                            <MailIcon />
-                        </a>
-                        <a href="#" aria-label="Telegram" className="text-text-muted hover:text-primary transition-colors">
-                            <TelegramIcon />
-                        </a>
-                        <a href="#" aria-label="Instagram" className="text-text-muted hover:text-primary transition-colors">
-                            <InstagramIcon />
-                        </a>
-                    </div>
+                <div className="border-t border-slate-200 dark:border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 w-full">
+                    <p className="text-text-muted text-sm text-center md:text-left">&copy; {new Date().getFullYear()} AIChE NTU Student Chapter. All Rights Reserved.</p>
+                    <SocialContacts variant="footer" />
                 </div>
             </div>
         </footer>

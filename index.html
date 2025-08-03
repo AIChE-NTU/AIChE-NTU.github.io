@@ -29,6 +29,19 @@
         background-color: rgb(var(--color-background));
         color: rgb(var(--color-text-main));
       }
+      
+      /* Animation initial states for HomePage */
+      .animate-fade-in-up,
+      .animate-slide-in-left,
+      .animate-slide-in-right,
+      .animate-slide-in-down {
+        opacity: 0;
+      }
+      
+      /* Ensure text readability with better contrast */
+      .hero-text-shadow {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.5);
+      }
     </style>
     <script>
       tailwind.config = {
@@ -47,14 +60,42 @@
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
             },
+            scale: {
+              '102': '1.02',
+            },
             animation: {
               float: 'float 6s ease-in-out infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+              'slide-in-down': 'slideInDown 0.8s ease-out forwards',
+              'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
             },
             keyframes: {
               float: {
                 '0%, 100%': { transform: 'translateY(0px)' },
                 '50%': { transform: 'translateY(-10px)' },
-              }
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInRight: {
+                '0%': { opacity: '0', transform: 'translateX(50px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              bounceGentle: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-5px)' },
+              },
             }
           },
         },

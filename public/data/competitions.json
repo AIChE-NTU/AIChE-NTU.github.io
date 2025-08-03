@@ -1,6 +1,21 @@
 
 [
     {
+        "id": "aiche-sls-10th-anniversary-logo-competition-2025",
+        "title": "AIChE SLS 10th Anniversary Logo Competition",
+        "description": "Design the commemorative logo for the 10th Anniversary of AIChE Singapore Local Section. Show your creativity and celebrate a decade of chemical engineering excellence.",
+        "details": "To celebrate the 10th Anniversary of the AIChE Singapore Local Section, we organized a logo design competition open to all students and young professionals. Participants were challenged to create a commemorative logo that captures the essence of chemical engineering innovation and community spirit in Singapore. The winning design was featured in all anniversary materials and events throughout 2025. This competition showcased the artistic and creative talents within our engineering community.",
+        "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=400&h=300",
+        "date": "April 15, 2025",
+        "registrationUrl": "",
+        "tags": [
+            {"type": "string", "value": "Design"},
+            {"type": "string", "value": "Anniversary"},
+            {"type": "string", "value": "Singapore Local Section"},
+            {"type": "string", "value": "Creative Competition"}
+        ]
+    },
+    {
         "id": "competition-briefing-2025",
         "title": "AIChE Student Competition Briefing",
         "description": "Get a head start on major AIChE competitions like Chem-E-Car, Chem-E-Cube, and the Student Poster Competition. Learn the rules and form your teams!",

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { MailIcon, BriefcaseIcon } from '../../Icons';
+import { MailIcon, BriefcaseIcon, LocationMarkerIcon } from '../../Icons';
 
 const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '', inquiryType: 'general' });
@@ -28,77 +28,164 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-16">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-text-main">Get In Touch</h1>
-        <p className="mt-4 text-lg text-text-muted max-w-3xl mx-auto">
-          Have a question, suggestion, or want to collaborate? We'd love to hear from you.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-12">
-        {/* Contact Form */}
-        <div className="bg-surface p-8 rounded-lg shadow-xl">
-          <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">Full Name</label>
-              <input type="text" name="name" id="name" required value={formState.name} onChange={handleInputChange} className="w-full bg-surface-alt border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-primary focus:outline-none" />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-2">Email Address</label>
-              <input type="email" name="email" id="email" required value={formState.email} onChange={handleInputChange} className="w-full bg-surface-alt border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-primary focus:outline-none" />
-            </div>
-            <div>
-              <label htmlFor="inquiryType" className="block text-sm font-medium text-text-muted mb-2">Inquiry Type</label>
-              <select
-                name="inquiryType"
-                id="inquiryType"
-                required
-                value={formState.inquiryType}
-                onChange={handleInputChange}
-                className="w-full bg-surface-alt border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-primary focus:outline-none"
-              >
-                <option value="general">General Inquiry</option>
-                <option value="partnership">Partnership &amp; Sponsorship</option>
-              </select>
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-2">Message</label>
-              <textarea name="message" id="message" rows={5} required value={formState.message} onChange={handleInputChange} className="w-full bg-surface-alt border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
-            </div>
-            <button 
-                type="submit" 
-                className="w-full bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary-focus transition-all duration-300"
-            >
-              Send Message
-            </button>
-          </form>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section - Medium size */}
+      <section className="py-12">
+        <div className="max-w-full mx-auto px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-text-main mb-4">Get In Touch</h1>
+          <p className="text-xl text-text-muted max-w-4xl mx-auto leading-relaxed">
+            Connect with the AIChE NTU Student Chapter. We're here to collaborate and innovate.
+          </p>
         </div>
+      </section>
 
-        {/* Contact Info */}
-        <div className="space-y-8 my-auto">
-            <h2 className="text-3xl font-bold">Contact Information</h2>
+      {/* Contact Content - Full Width Layout */}
+      <section className="px-8 pb-12">
+        <div className="max-w-full mx-auto h-full">
+          <div className="grid lg:grid-cols-4 gap-10 h-full">
+            {/* Contact Form - Takes more space */}
+            <div className="lg:col-span-3 bg-surface rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="mb-6">
+                <h2 className="text-3xl font-bold text-text-main mb-3">Send us a Message</h2>
+                <p className="text-lg text-text-muted">Fill out the form below and we'll get back to you.</p>
+              </div>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-3 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-base font-semibold text-text-main mb-2">Full Name *</label>
+                    <input 
+                      type="text" 
+                      name="name" 
+                      id="name" 
+                      required 
+                      value={formState.name} 
+                      onChange={handleInputChange} 
+                      className="w-full bg-surface-alt border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-300 text-text-main" 
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-base font-semibold text-text-main mb-2">Email Address *</label>
+                    <input 
+                      type="email" 
+                      name="email" 
+                      id="email" 
+                      required 
+                      value={formState.email} 
+                      onChange={handleInputChange} 
+                      className="w-full bg-surface-alt border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-300 text-text-main" 
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="inquiryType" className="block text-base font-semibold text-text-main mb-2">Inquiry Type *</label>
+                    <select
+                      name="inquiryType"
+                      id="inquiryType"
+                      required
+                      value={formState.inquiryType}
+                      onChange={handleInputChange}
+                      className="w-full bg-surface-alt border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-300 text-text-main"
+                    >
+                      <option value="general">General Inquiry</option>
+                      <option value="partnership">Partnership & Sponsorship</option>
+                      <option value="membership">Membership Information</option>
+                      <option value="events">Events & Workshops</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-base font-semibold text-text-main mb-2">Message *</label>
+                  <textarea 
+                    name="message" 
+                    id="message" 
+                    rows={6} 
+                    required 
+                    value={formState.message} 
+                    onChange={handleInputChange} 
+                    className="w-full bg-surface-alt border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-300 text-text-main resize-none" 
+                    placeholder="Tell us about your inquiry..."
+                  />
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-primary-focus transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Information - Medium Sidebar */}
             <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                    <MailIcon className="w-8 h-8 text-primary mt-1"/>
-                    <div>
-                        <h3 className="text-xl font-semibold">General Inquiries</h3>
-                        <p className="text-text-muted">For any general questions</p>
-                        <a href="mailto:contact@aichentu.org" className="text-primary hover:underline">contact@aichentu.org</a>
-                    </div>
+              <div>
+                <h2 className="text-2xl font-bold text-text-main mb-4">Contact Information</h2>
+                <p className="text-base text-text-muted leading-relaxed">
+                  Reach out to us through any of the channels below.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 p-4 bg-surface rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
+                    <MailIcon className="w-5 h-5 text-primary"/>
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-base font-bold text-text-main mb-1">General Inquiries</h3>
+                    <p className="text-sm text-text-muted mb-2">For any general questions</p>
+                    <a href="mailto:contact@aichentu.org" className="text-primary hover:text-primary-focus font-semibold transition-colors text-sm break-all">
+                      contact@aichentu.org
+                    </a>
+                  </div>
                 </div>
-                 <div className="flex items-start gap-4">
-                    <BriefcaseIcon className="w-8 h-8 text-primary mt-1"/>
-                    <div>
-                        <h3 className="text-xl font-semibold">Collaboration &amp; Brand Cooperation</h3>
-                        <p className="text-text-muted">For partnerships and sponsorships</p>
-                        <a href="mailto:partnerships@aichentu.org" className="text-primary hover:underline">partnerships@aichentu.org</a>
-                    </div>
+
+                <div className="flex items-start gap-3 p-4 bg-surface rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
+                    <BriefcaseIcon className="w-5 h-5 text-primary"/>
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-base font-bold text-text-main mb-1">Partnerships</h3>
+                    <p className="text-sm text-text-muted mb-2">For collaboration opportunities</p>
+                    <a href="mailto:partnerships@aichentu.org" className="text-primary hover:text-primary-focus font-semibold transition-colors text-sm break-all">
+                      partnerships@aichentu.org
+                    </a>
+                  </div>
                 </div>
+
+                <div className="flex items-start gap-3 p-4 bg-surface rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
+                    <LocationMarkerIcon className="w-5 h-5 text-primary"/>
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-base font-bold text-text-main mb-1">Location</h3>
+                    <p className="text-sm text-text-muted mb-2">Find us on campus</p>
+                    <p className="text-sm text-text-main font-medium">
+                      Nanyang Technological University<br />
+                      School of Chemical & Biomedical Engineering
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Links - Medium */}
+              <div className="bg-primary/5 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-base font-bold text-text-main mb-3">Quick Links</h3>
+                <div className="grid grid-cols-1 gap-2 text-sm">
+                  <a href="/join" className="text-primary hover:text-primary-focus font-medium transition-colors">Join Our Chapter</a>
+                  <a href="/activities" className="text-primary hover:text-primary-focus font-medium transition-colors">View Activities</a>
+                  <a href="/workshops" className="text-primary hover:text-primary-focus font-medium transition-colors">Workshops</a>
+                  <a href="/about" className="text-primary hover:text-primary-focus font-medium transition-colors">About Us</a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

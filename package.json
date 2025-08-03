@@ -2,12 +2,12 @@
   "name": "aiche-ntu-website",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "generate-heroimages": "node generate-heroimages.js"
   },
   "dependencies": {
     "react": "^19.1.1",

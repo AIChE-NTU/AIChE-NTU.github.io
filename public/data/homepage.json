@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "title": {
+      "words": ["Excel.", "Lead.", "Inspire."],
+      "highlightedWordIndex": 2
+    },
+    "subtitle": "Welcome to the AIChE Student Chapter at NTU, the premier hub for chemical engineering students. Join us to engage in innovative projects, gain industry insights, and build your professional network.",
+    "buttons": [
+      {
+        "text": "Join Us!",
+        "link": "/join",
+        "type": "primary",
+        "animation": "bounce-gentle"
+      },
+      {
+        "text": "View Activities",
+        "link": "/activities",
+        "type": "secondary"
+      }
+    ],
+    "backgroundImages": [
+      "/images/heroimages/introduction_1.653Z.png",
+      "/images/heroimages/introduction_2.png",
+      "/images/heroimages/plant.280Z.png",
+      "/images/heroimages/food_industry.852Z.png"
+    ],
+    "imageTransitionInterval": 5000
+  },
+  "sections": {
+    "activities": {
+      "title": "Recent Activities",
+      "subtitle": "Discover the latest events and activities from our vibrant AIChE community",
+      "backgroundColor": "blue",
+      "itemsToShow": 3,
+      "viewMorePath": "/activities",
+      "viewMoreText": "View More Activities"
+    },
+    "articles": {
+      "title": "Latest Articles",
+      "subtitle": "Stay informed with the latest insights and knowledge from the chemical engineering world",
+      "backgroundColor": "teal",
+      "itemsToShow": 3,
+      "viewMorePath": "/articles",
+      "viewMoreText": "View More Articles"
+    },
+    "workshops": {
+      "title": "Upcoming Workshops",
+      "subtitle": "Enhance your skills with hands-on workshops led by industry experts",
+      "backgroundColor": "purple",
+      "itemsToShow": 3,
+      "viewMorePath": "/workshops",
+      "viewMoreText": "View More Workshops"
+    },
+    "competitions": {
+      "title": "Past Competitions",
+      "subtitle": "Explore the exciting competitions we've hosted and the achievements of our participants",
+      "backgroundColor": "orange",
+      "itemsToShow": 3,
+      "viewMorePath": "/competitions",
+      "viewMoreText": "View More Competitions"
+    },
+    "projects": {
+      "winter": {
+        "title": "ChEmber",
+        "subtitle": "Explore innovative winter projects that showcase cutting-edge chemical engineering solutions",
+        "backgroundImages": {
+          "main": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+          "overlay": "rgba(59, 130, 246, 0.7)"
+        }
+      },
+      "summer": {
+        "title": "ChEclipse",
+        "subtitle": "Explore innovative summer projects that showcase cutting-edge chemical engineering solutions",
+        "backgroundImages": {
+          "main": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+          "overlay": "rgba(251, 146, 60, 0.7)"
+        }
+      },
+      "seasonTransitionInterval": 8000,
+      "itemsToShow": 10
+    }
+  },
+  "emptyStateMessages": {
+    "activities": "No activities to show right now.",
+    "articles": "No articles to show right now.",
+    "workshops": "No workshops to show right now.",
+    "competitions": "No competitions to show right now.",
+    "projects": "No projects to show right now."
+  }
+}

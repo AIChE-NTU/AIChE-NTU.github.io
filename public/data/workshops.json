@@ -1,6 +1,23 @@
 
 [
     {
+        "id": "cider-making-workshop-zymurgy-2024",
+        "title": "Cider Making Workshop with Zymurgy Build",
+        "description": "Learn the art and science of cider making with hands-on fermentation techniques and quality control methods.",
+        "details": "Join us for an exciting collaboration with Zymurgy Build! This workshop combines chemical engineering principles with traditional fermentation techniques. You'll learn about enzymatic reactions, pH control, fermentation kinetics, and quality assurance in beverage production. Perfect for understanding bioprocess engineering in a fun, practical setting.",
+        "date": "October 26, 2024",
+        "instructor": "Zymurgy Build & AIChE Members",
+        "level": "Beginner",
+        "category": "Bioprocess Engineering",
+        "status": "Completed",
+        "imageUrl": "/images/workshops/cider-workshops/1.jpg",
+        "registrationUrl": "",
+        "duration": "4 hours",
+        "location": "NTU Bioprocessing Lab",
+        "registrationRequired": true,
+        "collaborator": "Zymurgy Build"
+    },
+    {
         "id": "aspen-hysys-workshop-2025",
         "title": "Skills Workshop: Process Simulation with Aspen Hysys",
         "description": "A hands-on workshop covering the fundamentals of process simulation, essential for any chemical engineering student.",

@@ -1,25 +1,156 @@
 
-[
-    {
-        "id": "chember-winter-project-2025",
-        "title": "Winter Project: ChEmber",
-        "description": "Ignite your passion for chemical engineering this winter! ChEmber (Chemical Engineering + Ember) is a project initiative focused on sparking innovation during the semester break.",
-        "details": "The ChEmber Winter Project is designed to let students dive deep into a specific area of chemical engineering. This is a student-led initiative where teams can choose to tackle a problem in one of several key fields. Potential project streams include:\n- Process Simulation & Design: Model a complex chemical process using Aspen HYSYS or similar software.\n- Sustainability & LCA: Conduct a Life Cycle Assessment of a product or process.\n- Bioprocessing / Biotech: Design a bioreactor or a downstream purification process.\n- Chemical Engineering Machine Learning: Work on a small transfer learning project applied to chemical data.\n- Thermodynamics / Reaction Engineering: Investigate a complex reaction system or thermodynamic property model.\n- Control System: Design and simulate a process control strategy using MATLAB/Simulink.",
-        "imageUrl": "https://picsum.photos/seed/project1/400/300",
-        "tags": ["Process Simulation", "Sustainability", "Bioprocessing", "Machine Learning", "Thermodynamics", "Control Systems"],
-        "season": "Winter",
-        "releaseDate": "December 1, 2025",
-        "registrationUrl": "https://forms.cloud.microsoft/your-form-link"
+{
+  "config": {
+    "showCurrentProjects": false,
+    "showComingSoon": true,
+    "currentYear": "2025"
+  },
+  "chember": {
+    "id": "chember-winter-project-2025",
+    "title": "ChEmber",
+    "subtitle": "Winter Projects Initiative",
+    "description": "Ignite your passion for chemical engineering this winter! ChEmber (Chemical Engineering + Ember) is a project initiative focused on sparking innovation during the semester break.",
+    "season": "winter",
+    "duration": "1-month project",
+    "releaseDate": "December 1, 2025",
+    "visible": true,
+    "projects": [
+      {
+        "id": "biorefinery-development",
+        "title": "Biorefinery Process Development",
+        "description": "Design sustainable biomass conversion technologies for renewable chemicals and fuels production.",
+        "tags": [
+          { "name": "Bioprocessing", "color": "bg-blue-500/80 text-blue-100 border-blue-300/50" },
+          { "name": "Process Design", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Sustainability", "color": "bg-green-500/80 text-green-100 border-green-300/50" }
+        ]
+      },
+      {
+        "id": "carbon-capture-system",
+        "title": "Carbon Capture Technology",
+        "description": "Develop industrial-scale carbon capture systems using novel absorption materials.",
+        "tags": [
+          { "name": "Carbon Capture", "color": "bg-gray-500/80 text-gray-100 border-gray-300/50" },
+          { "name": "Mass Transfer", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Environmental", "color": "bg-emerald-500/80 text-emerald-100 border-emerald-300/50" }
+        ]
+      },
+      {
+        "id": "membrane-technology",
+        "title": "Polymer Membrane Technology",
+        "description": "Research advanced membranes for water purification and gas separation applications.",
+        "tags": [
+          { "name": "Polymer Science", "color": "bg-pink-500/80 text-pink-100 border-pink-300/50" },
+          { "name": "Materials Science", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Water Treatment", "color": "bg-blue-600/80 text-blue-100 border-blue-300/50" }
+        ]
+      },
+      {
+        "id": "catalytic-reactor-design",
+        "title": "Catalytic Reactor Design",
+        "description": "Optimize heterogeneous catalytic reactors for petrochemical processes.",
+        "tags": [
+          { "name": "Catalysis", "color": "bg-indigo-500/80 text-indigo-100 border-indigo-300/50" },
+          { "name": "Reactor Design", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Petrochemicals", "color": "bg-amber-500/80 text-amber-100 border-amber-300/50" }
+        ]
+      },
+      {
+        "id": "process-safety-analysis",
+        "title": "Process Safety Analysis",
+        "description": "Conduct hazard analysis and risk assessment for chemical manufacturing plants.",
+        "tags": [
+          { "name": "Process Safety", "color": "bg-red-500/80 text-red-100 border-red-300/50" },
+          { "name": "Risk Assessment", "color": "bg-orange-600/80 text-orange-100 border-orange-300/50" },
+          { "name": "HAZOP", "color": "bg-yellow-600/80 text-yellow-100 border-yellow-300/50" }
+        ]
+      }
+    ]
+  },
+  "checlipse": {
+    "id": "checlipse-summer-project-2026",
+    "title": "ChEclipse",
+    "subtitle": "Summer Research Initiative",
+    "description": "Uncover new ideas this summer with ChEclipse (Chemical + Eclipse), a project initiative that brings light to challenging engineering problems.",
+    "season": "summer",
+    "duration": "3-month project",
+    "releaseDate": "June 15, 2026",
+    "visible": true,
+    "projects": [
+      {
+        "id": "solar-reactor-optimization",
+        "title": "Solar Chemical Reactor Optimization",
+        "description": "Optimize solar thermal reactors for photocatalytic water splitting and hydrogen production.",
+        "tags": [
+          { "name": "Solar Energy", "color": "bg-yellow-500/80 text-yellow-100 border-yellow-300/50" },
+          { "name": "Reactor Design", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Renewable Energy", "color": "bg-green-500/80 text-green-100 border-green-300/50" }
+        ]
+      },
+      {
+        "id": "green-synthesis-analysis",
+        "title": "Green Chemistry Synthesis",
+        "description": "Develop environmentally friendly synthetic routes for pharmaceutical intermediates.",
+        "tags": [
+          { "name": "Green Chemistry", "color": "bg-lime-500/80 text-lime-100 border-lime-300/50" },
+          { "name": "Organic Chemistry", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Pharmaceuticals", "color": "bg-pink-500/80 text-pink-100 border-pink-300/50" }
+        ]
+      },
+      {
+        "id": "energy-storage-testing",
+        "title": "Battery Material Testing",
+        "description": "Test and characterize novel battery materials for energy storage systems.",
+        "tags": [
+          { "name": "Energy Storage", "color": "bg-amber-500/80 text-amber-100 border-amber-300/50" },
+          { "name": "Electrochemistry", "color": "bg-purple-600/80 text-purple-100 border-purple-300/50" },
+          { "name": "Materials Testing", "color": "bg-teal-500/80 text-teal-100 border-teal-300/50" }
+        ]
+      },
+      {
+        "id": "distillation-optimization",
+        "title": "Distillation Column Optimization",
+        "description": "Design and optimize multi-component distillation systems for chemical separations.",
+        "tags": [
+          { "name": "Separation Processes", "color": "bg-cyan-500/80 text-cyan-100 border-cyan-300/50" },
+          { "name": "Process Optimization", "color": "bg-orange-600/80 text-orange-100 border-orange-300/50" },
+          { "name": "Chemical Engineering", "color": "bg-blue-500/80 text-blue-100 border-blue-300/50" }
+        ]
+      },
+      {
+        "id": "pharmaceutical-crystallization",
+        "title": "Pharmaceutical Crystallization",
+        "description": "Study crystallization processes for pharmaceutical drug manufacturing and purification.",
+        "tags": [
+          { "name": "Crystallization", "color": "bg-violet-500/80 text-violet-100 border-violet-300/50" },
+          { "name": "Pharmaceuticals", "color": "bg-pink-500/80 text-pink-100 border-pink-300/50" },
+          { "name": "Process Development", "color": "bg-indigo-600/80 text-indigo-100 border-indigo-300/50" }
+        ]
+      }
+    ]
+  },
+  "comingSoon": {
+    "winter": {
+      "id": "winter-projects-coming-soon",
+      "title": "Winter Projects 2025",
+      "subtitle": "More Exciting Projects Coming Soon!",
+      "description": "Stay tuned for our upcoming winter project initiatives. We're preparing innovative chemical engineering challenges for the winter semester.",
+      "season": "winter",
+      "duration": "Coming Soon",
+      "releaseDate": "TBA",
+      "visible": true,
+      "comingSoon": true
     },
-    {
-        "id": "checlipse-summer-project-2026",
-        "title": "Summer Project: ChEclipse",
-        "description": "Uncover new ideas this summer with ChEclipse (Chemical + Eclipse), a project initiative that brings light to challenging engineering problems.",
-        "details": "The ChEclipse Summer Project offers a chance to explore cutting-edge topics in chemical engineering in collaboration with faculty advisors. This initiative encourages students to tackle research-oriented or design-based challenges. Potential project fields for this summer include:\n- Cooling & Process Engineering: Design an energy-efficient cooling system for data centers or industrial processes.\n- Green Chemistry & Thermodynamics: Develop and model a process using green solvents or sustainable reaction pathways.\n- Bioengineering & Cooling: Explore bio-inspired cooling mechanisms or the thermal management of bioreactors.\n- Semiconductors, Materials and AI: Investigate new materials for semiconductor manufacturing or apply AI to predict material properties.",
-        "imageUrl": "https://picsum.photos/seed/project2/400/300",
-        "tags": ["Cooling", "Green Chemistry", "Bioengineering", "Semiconductors", "AI"],
-        "season": "Summer",
-        "releaseDate": "June 15, 2026",
-        "registrationUrl": "https://forms.cloud.microsoft/your-form-link"
+    "summer": {
+      "id": "summer-projects-coming-soon",
+      "title": "Summer Projects 2026",
+      "subtitle": "More Exciting Projects Coming Soon!",
+      "description": "Get ready for our next summer research initiatives. We're developing cutting-edge projects for the upcoming summer season.",
+      "season": "summer",
+      "duration": "Coming Soon",
+      "releaseDate": "TBA",
+      "visible": true,
+      "comingSoon": true
     }
-]
+  }
+}

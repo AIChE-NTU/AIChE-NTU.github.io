@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/AIChE-NTU",
+      "icon": "github",
+      "ariaLabel": "Visit our GitHub organization"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/company/aiche-ntu",
+      "icon": "linkedin",
+      "ariaLabel": "Connect with us on LinkedIn"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:aiche@ntu.edu.sg",
+      "icon": "mail",
+      "ariaLabel": "Send us an email"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://t.me/aichentuchannel",
+      "icon": "telegram",
+      "ariaLabel": "Join our Telegram channel"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/aiche_ntu",
+      "icon": "instagram",
+      "ariaLabel": "Follow us on Instagram"
+    }
+  ]
+}

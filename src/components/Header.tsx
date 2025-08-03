@@ -38,12 +38,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="bg-surface/80 dark:bg-surface/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
+        <header className="bg-surface/80 dark:bg-surface/80 backdrop-blur-sm sticky top-0 z-50 shadow-md w-full">
+            <div className="w-full px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-20 w-full">
                     <div className="flex-shrink-0">
                         <NavLink to="/" className="flex items-center">
-                            {logoUrl && <img src={logoUrl} alt="AIChE NTU Student Chapter Logo" className="h-12 w-auto object-contain"/>}
+                            {logoUrl && <img src={logoUrl} alt="AIChE NTU Student Chapter Logo" className="h-16 w-auto object-contain"/>}
                         </NavLink>
                     </div>
 
@@ -60,9 +60,9 @@ const Header: React.FC = () => {
                                         {link.name}
                                         <ChevronDownIcon className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                                     </NavLink>
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-surface rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-10">
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 bg-surface rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 border border-gray-200 dark:border-gray-700">
                                         {link.children.map(child => (
-                                            <NavLink key={child.name} to={child.path} className="block px-4 py-2 text-text-main hover:bg-primary/10">
+                                            <NavLink key={child.name} to={child.path} className="block px-4 py-2 text-text-main hover:bg-primary/10 hover:text-primary transition-colors duration-200">
                                                 {child.name}
                                             </NavLink>
                                         ))}

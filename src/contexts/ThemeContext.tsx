@@ -12,14 +12,18 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-        const savedTheme = localStorage.getItem('theme') as Theme;
-        if (savedTheme) {
-            return savedTheme;
+        try {
+            const savedTheme = localStorage.getItem('theme') as Theme;
+            if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
+                return savedTheme;
+            }
+        } catch (error) {
+            console.warn('Failed to read theme from localStorage:', error);
         }
-        // If no theme is saved, use the user's system preference
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        // Default to dark theme, fallback to system preference if needed
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
     }
-    return 'light'; // Default for SSR
+    return 'dark'; // Default to dark for SSR
   });
 
   useEffect(() => {
@@ -29,7 +33,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('theme', theme);
+    
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (error) {
+      console.warn('Failed to save theme to localStorage:', error);
+    }
   }, [theme]);
   
   const value = useMemo(() => ({ theme, setTheme }), [theme]);

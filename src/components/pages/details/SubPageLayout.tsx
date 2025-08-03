@@ -58,7 +58,8 @@ const SubPageLayout: React.FC<SubPageLayoutProps> = ({ isLoading, item, infoItem
             <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-6">
                     <h2 className="text-3xl font-bold border-b pb-4">Details</h2>
-                    <div className="prose dark:prose-invert max-w-none text-text-muted space-y-4" dangerouslySetInnerHTML={{ __html: item.details.replace(/\n/g, '<br />') }} />
+                    <div className="prose dark:prose-invert max-w-none text-text-muted space-y-4" 
+                         dangerouslySetInnerHTML={{ __html: (item.details || '').replace(/\n/g, '<br />') }} />
                     {/* Render extra content here */}
                     {children}
                 </div>
