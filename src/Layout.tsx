@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SocialContacts from './components/SocialContacts';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import SocialContacts from './components/layout/SocialContacts';
 
 const Layout: React.FC = () => {
   return (

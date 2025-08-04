@@ -1,14 +1,15 @@
 
 {
-  "siteLogoUrl": "https://raw.githubusercontent.com/EnsonCH/Icons/main/aiche_sc/ntu_sc_logo.png",
+  "siteLogoUrl": "/images/logo/logo.jpg",
   "homePageHeroImages": [
-    "https://images.unsplash.com/photo-1581093582538-a6810a47333b?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    "/images/introduction_1.653Z.png",
+    "/images/introduction_2.png",
     "https://images.unsplash.com/photo-1628188689169-3aaa64614949?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
     "https://images.unsplash.com/photo-1518152006812-edb29b0d37e4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
     "https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
   ],
-  "aboutPageTeamPhoto": "https://images.unsplash.com/photo-1579532582937-16c115d797e9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800",
-  "missionImageUrl": "https://images.unsplash.com/photo-1554498802-992a6d123512?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=500",
+  "aboutPageTeamPhoto": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+  "missionImageUrl": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800",
   "partners": [
     {
       "name": "Dow",

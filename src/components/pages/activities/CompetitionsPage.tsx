@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Spinner from '../../Spinner';
-import ActivityCard from '../../ActivityCard';
+import Spinner from '../../ui/Spinner';
+import ActivityCard from '../../cards/ActivityCard';
 import type { Activity } from '../../../constants'
 import { getDataUrl } from '../../../constants';
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, TagIcon } from '../../Icons';
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, TagIcon } from '../../ui/Icons';
 import type { Article } from '../../../constants';
 import { getDataUrl } from '../../../constants';
-import Spinner from '../../Spinner';
+import Spinner from '../../ui/Spinner';
 
 const ArticleDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();

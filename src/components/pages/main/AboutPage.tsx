@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import type { TeamMember, Professor } from '../../../constants'
 import { getDataUrl } from '../../../constants';
-import { LinkedinIcon } from '../../Icons';
-import Spinner from '../../Spinner';
+import { LinkedinIcon } from '../../ui/Icons';
+import Spinner from '../../ui/Spinner';
 
 const TeamMemberCard: React.FC<{ member: TeamMember; size?: 'large' | 'medium' | 'small' }> = ({ member, size = 'medium' }) => {
     const sizeClasses = {

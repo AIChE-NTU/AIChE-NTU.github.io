@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import Card from '../../Card';
-import { ExternalLinkIcon } from '../../Icons';
-import Spinner from '../../Spinner';
+import Card from '../../cards/Card';
+import { ExternalLinkIcon } from '../../ui/Icons';
+import Spinner from '../../ui/Spinner';
 import { getDataUrl } from '../../../constants';
 
 interface JoinUsAssets {

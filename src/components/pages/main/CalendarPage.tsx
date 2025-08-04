@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import type { Project, Activity, Workshop } from '../../../constants'
 import { getDataUrl } from '../../../constants';
-import { XIcon } from '../../Icons';
-import Spinner from '../../Spinner';
+import { XIcon } from '../../ui/Icons';
+import Spinner from '../../ui/Spinner';
 
 interface CalendarEvent {
   id: string;

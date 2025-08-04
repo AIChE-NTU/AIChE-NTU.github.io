@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getDataUrl } from '../constants';
+import { getDataUrl } from '../../constants';
 import SocialContacts from './SocialContacts';
 
 interface Partner {

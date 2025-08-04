@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { GithubIcon, LinkedinIcon, MailIcon, TelegramIcon, InstagramIcon } from './Icons';
-import { getDataUrl } from '../constants';
-
+import { GithubIcon, LinkedinIcon, MailIcon, TelegramIcon, InstagramIcon } from '../ui/Icons';
+import { getDataUrl } from '../../constants';
 export interface SocialContact {
   name: string;
   url: string;

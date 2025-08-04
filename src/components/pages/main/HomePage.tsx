@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Spinner from '../../Spinner';
-import ProjectCard from '../../ProjectCard';
-import ActivityCard from '../../ActivityCard';
-import WorkshopCard from '../../WorkshopCard';
-import ArticleCard from '../../ArticleCard';
+import Spinner from '../../ui/Spinner';
+import ProjectCard from '../../cards/ProjectCard';
+import ActivityCard from '../../cards/ActivityCard';
+import WorkshopCard from '../../cards/WorkshopCard';
+import ArticleCard from '../../cards/ArticleCard';
 import type { Project, Workshop, Activity, Article } from '../../../constants';
 import { getDataUrl } from '../../../constants';
 

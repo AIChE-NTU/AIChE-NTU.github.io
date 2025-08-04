@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { MailIcon, BriefcaseIcon, LocationMarkerIcon } from '../../Icons';
+import { MailIcon, BriefcaseIcon, LocationMarkerIcon } from '../../ui/Icons';
 
 const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '', inquiryType: 'general' });

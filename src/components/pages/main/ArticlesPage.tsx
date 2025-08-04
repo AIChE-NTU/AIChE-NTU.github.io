@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import Spinner from '../../Spinner';
+import Spinner from '../../ui/Spinner';
 import type { Article } from '../../../constants'
 import { getDataUrl } from '../../../constants';
-import ArticleCard from '../../ArticleCard';
+import ArticleCard from '../../cards/ArticleCard';
 
 const ArticlesPage: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);

@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { navLinks, getDataUrl } from '../constants';
-import { useTheme } from '../contexts/ThemeContext';
-import { MenuIcon, XIcon, SunIcon, MoonIcon, ChevronDownIcon } from './Icons';
+import { navLinks, getDataUrl } from '../../constants';
+import { useTheme } from '../../contexts/ThemeContext';
+import { MenuIcon, XIcon, SunIcon, MoonIcon, ChevronDownIcon } from '../ui/Icons';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);

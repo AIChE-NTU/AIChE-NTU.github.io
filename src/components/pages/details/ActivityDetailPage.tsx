@@ -4,7 +4,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import type { Activity } from '../../../constants'
 import { getDataUrl } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
-import { XIcon } from '../../Icons';
+import { XIcon } from '../../ui/Icons';
 
 const ActivityDetailPage: React.FC = () => {
     const { activityId } = useParams<{ activityId: string }>();
