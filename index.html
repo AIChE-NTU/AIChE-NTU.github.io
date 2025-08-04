@@ -29,18 +29,79 @@
         background-color: rgb(var(--color-background));
         color: rgb(var(--color-text-main));
       }
-      
-      /* Animation initial states for HomePage */
-      .animate-fade-in-up,
-      .animate-slide-in-left,
-      .animate-slide-in-right,
-      .animate-slide-in-down {
-        opacity: 0;
+      .animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right, .animate-slide-in-down { opacity: 0; }
+      .hero-text-shadow { text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.5); }
+
+      /* --- NEW & IMPROVED ORG CHART STYLES --- */
+      .org-chart {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        animation: fadeInSlideUp 0.7s ease-out forwards;
       }
-      
-      /* Ensure text readability with better contrast */
-      .hero-text-shadow {
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.5);
+      .org-chart ul {
+        position: relative;
+        padding-top: 4rem; /* Space for connectors */
+        white-space: nowrap;
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+      }
+      /* Vertical line FROM parent TO children's horizontal line */
+      .org-chart ul::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 4rem;
+        background-color: rgb(var(--color-text-muted) / 0.3);
+        transform: translateX(-50%);
+      }
+      .org-chart li {
+        display: inline-block;
+        position: relative;
+        padding: 0 1rem;
+        vertical-align: top;
+      }
+      /* Vertical line UP from a card TO its horizontal line */
+      .org-chart li::before {
+        content: '';
+        position: absolute;
+        top: -2rem; /* Half of ul padding-top */
+        left: 50%;
+        width: 2px;
+        height: 2rem;
+        background-color: rgb(var(--color-text-muted) / 0.3);
+        transform: translateX(-50%);
+      }
+      /* Horizontal line connecting siblings */
+      .org-chart li::after {
+        content: '';
+        position: absolute;
+        top: -2rem; /* Aligns with vertical line */
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(var(--color-text-muted) / 0.3);
+        transform: translateY(-50%);
+      }
+      /* --- HIDE UNNECESSARY CONNECTORS --- */
+      .org-chart > ul { padding-top: 0; }
+      .org-chart > ul::before,
+      .org-chart > ul > li::before,
+      .org-chart > ul > li::after {
+        display: none; /* Hide lines above the top-level director */
+      }
+      .org-chart li:only-child::after {
+        display: none; /* No horizontal bar for a single child */
+      }
+      /* Trim horizontal bars for first/last children to make L-corners */
+      .org-chart li:first-child:not(:only-child)::after { left: 50%; width: 50%; }
+      .org-chart li:last-child:not(:only-child)::after { width: 50%; }
+
+      @keyframes fadeInSlideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
     </style>
     <script>
@@ -60,9 +121,7 @@
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
             },
-            scale: {
-              '102': '1.02',
-            },
+            scale: { '102': '1.02', },
             animation: {
               float: 'float 6s ease-in-out infinite',
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -72,30 +131,12 @@
               'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
             },
             keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(30px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              slideInLeft: {
-                '0%': { opacity: '0', transform: 'translateX(-50px)' },
-                '100%': { opacity: '1', transform: 'translateX(0)' },
-              },
-              slideInRight: {
-                '0%': { opacity: '0', transform: 'translateX(50px)' },
-                '100%': { opacity: '1', transform: 'translateX(0)' },
-              },
-              slideInDown: {
-                '0%': { opacity: '0', transform: 'translateY(-30px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              bounceGentle: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-5px)' },
-              },
+              float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-10px)' }, },
+              fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' }, },
+              slideInLeft: { '0%': { opacity: '0', transform: 'translateX(-50px)' }, '100%': { opacity: '1', transform: 'translateX(0)' }, },
+              slideInRight: { '0%': { opacity: '0', transform: 'translateX(50px)' }, '100%': { opacity: '1', transform: 'translateX(0)' }, },
+              slideInDown: { '0%': { opacity: '0', transform: 'translateY(-30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' }, },
+              bounceGentle: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-5px)' }, },
             }
           },
         },

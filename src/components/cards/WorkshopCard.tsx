@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './Card';
-import type { Workshop } from '../constants';
+import type { Workshop } from '../../constants';
 
 const WorkshopCard: React.FC<{ workshop: Workshop }> = ({ workshop }) => (
     <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-primary/10">

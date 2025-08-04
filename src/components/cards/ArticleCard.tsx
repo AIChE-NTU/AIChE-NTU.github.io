@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './Card';
-import type { Article } from '../constants';
+import type { Article } from '../../constants';
 
 const ArticleCard: React.FC<{ article: Article }> = ({ article }) => (
   <Card className="flex flex-col h-full min-h-[500px]">

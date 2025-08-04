@@ -11,6 +11,23 @@
         "category": "Bioprocess Engineering",
         "status": "Completed",
         "imageUrl": "/images/workshops/cider-workshops/1.jpg",
+        "gallery": [
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/1.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/10.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/11.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/12.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/13.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/14.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/2.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/3.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/4.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/5.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/6.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/7.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/8.jpg",
+        "https://cdn.jsdelivr.net/gh/AIChE-NTU/aiche-ntu.github.io/public/images/workshops/cider-workshops/9.jpg"
+
+        ],
         "registrationUrl": "",
         "duration": "4 hours",
         "location": "NTU Bioprocessing Lab",

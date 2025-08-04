@@ -33,9 +33,10 @@ const HomePage: React.FC = () => {
                     fetch(getDataUrl('activities.json')).then(res => res.json()),
                     fetch(getDataUrl('articles.json')).then(res => res.json()),
                     fetch(getDataUrl('competitions.json')).then(res => res.json()),
-                    fetch(getDataUrl('logo.json')).then(res => res.json()),
-                    fetch('/images/heroimages/heroimages.json').then(res => res.json()).catch(() => []),
+                    fetch('/images/logo/logo_github.json').then(res => res.json()),
+                    fetch('/images/heroimages/heroimages_github.json').then(res => res.json()).catch(() => []),
                     fetch(getDataUrl('homepage.json')).then(res => res.json()).catch(() => null)
+
                 ]);
 
                 // Set homepage configuration

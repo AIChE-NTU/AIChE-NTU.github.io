@@ -113,11 +113,15 @@ export interface Workshop {
     description:string;
     details: string;
     date: string;
+    location: string;
+    duration: string;
+    collaborator:string;
     instructor: string;
     level: 'Beginner' | 'Intermediate' | 'Advanced';
     category: string;
     status: 'Upcoming' | 'Completed';
     imageUrl: string;
+    gallery?: string[];
     registrationUrl?: string;
 }
 
@@ -125,6 +129,7 @@ export interface TeamMember {
     name: string;
     role: string;
     bio: string;
+    type: string;
     imageUrl: string;
     linkedinUrl?: string;
 }

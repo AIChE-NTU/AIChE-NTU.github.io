@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import type { Workshop } from '../../../constants'
 import { getDataUrl } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
+import Gallery from '../../layout/gallery';
 
 const WorkshopDetailPage: React.FC = () => {
     const { workshopId } = useParams<{ workshopId: string }>();
@@ -50,6 +51,8 @@ const WorkshopDetailPage: React.FC = () => {
         },
         { label: 'Instructor', value: <span>{workshop.instructor}</span> },
         { label: 'Date', value: <span>{workshop.date}</span> },
+        { label: 'Location', value: <span>{workshop.location}</span> },
+        { label: 'Duration', value: <span>{workshop.duration}</span> },
     ] : [];
 
     return (
@@ -63,9 +66,16 @@ const WorkshopDetailPage: React.FC = () => {
                 backLink: '/workshops',
                 backLinkText: 'Back to Workshops',
             }}
-        />
+        >
+            {/*Gallery Section*/}
+                {workshop?.gallery && workshop.gallery.length > 0 && (
+                    <Gallery images={workshop.gallery} title="Gallery"/>
+                )}
+
+                    </SubPageLayout>
     );
 };
 
 export default WorkshopDetailPage;
+
 

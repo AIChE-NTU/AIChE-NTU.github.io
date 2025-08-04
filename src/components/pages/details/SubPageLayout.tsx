@@ -56,17 +56,17 @@ const SubPageLayout: React.FC<SubPageLayoutProps> = ({ isLoading, item, infoItem
             
             {/* Main Content */}
             <div className="grid lg:grid-cols-3 gap-12">
-                <div className="lg:col-span-2 space-y-6">
-                    <h2 className="text-3xl font-bold border-b pb-4">Details</h2>
-                    <div className="prose dark:prose-invert max-w-none text-text-muted space-y-4" 
+                <div className="lg:col-span-2 space-y-8">
+                    <h2 className="text-3xl font-bold border-b pb-6">Details</h2>
+                    <div className="prose dark:prose-invert max-w-none text-text-muted space-y-6" 
                          dangerouslySetInnerHTML={{ __html: (item.details || '').replace(/\n/g, '<br />') }} />
                     {/* Render extra content here */}
                     {children}
                 </div>
                 
                 {/* Info Card */}
-                <div className="lg:col-span-1 space-y-6">
-                    <div className="bg-surface p-6 rounded-lg shadow-lg sticky top-24">
+                <div className="lg:col-span-1 flex justify-center">
+                    <div className="bg-surface p-6 rounded-lg shadow-lg sticky top-24 max-w-sm w-full">
                          <h3 className="text-2xl font-bold mb-6 border-b pb-4">Information</h3>
                          <div className="space-y-4">
                             {infoItems.map(info => (
