@@ -33,19 +33,8 @@
 - Change `hero.subtitle` for main banner text
 - Change section titles under `sections.activities.title`, etc.
 
-### 4. Add Team Member
-**File**: `public/data/team.json`
-```json
-{
-  "name": "Full Name",
-  "position": "Title",
-  "year": "Year 3",
-  "major": "Chemical Engineering",
-  "image": "/images/team/photo.jpg"
-}
-```
 
-### 5. Update Contact Info
+### 4. Update Contact Info
 **File**: `public/data/socialcontacts.json`
 - Update URLs for social media
 - Add new contact methods
@@ -61,6 +50,17 @@
 | **Workshops** | `public/data/workshops.json` |
 | **Articles** | `public/data/articles.json` |
 | **Team members** | `public/data/team.json` |
+
+### Example Team Member Entry
+```json
+{
+  "name": "Full Name",
+  "position": "Title",
+  "year": "Year 3",
+  "major": "Chemical Engineering",
+  "image": "/images/team/photo.jpg"
+}
+```
 | **Contact info** | `public/data/socialcontacts.json` |
 | **Projects** | `public/data/projects.json` |
 | **Images** | `public/images/[category]/` |

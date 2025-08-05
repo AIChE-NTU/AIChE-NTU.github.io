@@ -27,12 +27,13 @@ const HomePage: React.FC = () => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const [projectsRes, workshopsRes, activitiesRes, articlesRes, competitionsRes, logoRes, heroImagesRes, homepageRes] = await Promise.all([
+                const [projectsRes, workshopsRes, activitiesRes, articlesRes, competitionsRes, industryVisitsRes, logoRes, heroImagesRes, homepageRes] = await Promise.all([
                     fetch(getDataUrl('projects.json')).then(res => res.json()),
                     fetch(getDataUrl('workshops.json')).then(res => res.json()),
                     fetch(getDataUrl('activities.json')).then(res => res.json()),
                     fetch(getDataUrl('articles.json')).then(res => res.json()),
                     fetch(getDataUrl('competitions.json')).then(res => res.json()),
+                    fetch(getDataUrl('industry-visits.json')).then(res => res.json()),
                     fetch('/images/logo/logo_github.json').then(res => res.json()),
                     fetch('/images/heroimages/heroimages_github.json').then(res => res.json()).catch(() => []),
                     fetch(getDataUrl('homepage.json')).then(res => res.json()).catch(() => null)
@@ -45,10 +46,20 @@ const HomePage: React.FC = () => {
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
 
+                // Add a type field to each for identification if needed
+                 const allActivities = [
+                ...activitiesRes.map((a: any) => ({ ...a, _type: 'activity' })),
+                ...competitionsRes.map((c: any) => ({ ...c, _type: 'competition' })),
+                ...workshopsRes
+                    .filter((w: any) => w.status === 'Completed' || new Date(w.date) < today)
+                    .map((w: any) => ({ ...w, _type: 'workshop' })),
+                ...(industryVisitsRes || []).map((v: any) => ({ ...v, _type: 'industry-visit' }))
+            ];
+
                 // Process data
-                const pastActivities = activitiesRes
-                    .filter((activity: Activity) => new Date(activity.date) < today)
-                    .sort((a: Activity, b: Activity) => new Date(b.date).getTime() - new Date(a.date).getTime());
+                const pastAllActivities = allActivities
+                    .filter((activity: any) => new Date(activity.date) < today)
+                    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
                 const pastCompetitionsFiltered = competitionsRes
                     .filter((competition: Activity) => new Date(competition.date) < today)
@@ -93,7 +104,7 @@ const HomePage: React.FC = () => {
                 
                 // Use homepage config to determine how many items to show
                 const itemsToShow = homepageRes?.sections || {};
-                setRecentActivities(pastActivities.slice(0, itemsToShow.activities?.itemsToShow || 3));
+                setRecentActivities(pastAllActivities.slice(0, itemsToShow.activities?.itemsToShow || 3));
                 setUpcomingWorkshops(upcomingWorkshopsFiltered.slice(0, itemsToShow.workshops?.itemsToShow || 3));
                 setLatestArticles(sortedArticles.slice(0, itemsToShow.articles?.itemsToShow || 3));
                 setPastCompetitions(pastCompetitionsFiltered.slice(0, itemsToShow.competitions?.itemsToShow || 3));
@@ -320,7 +331,7 @@ const HomePage: React.FC = () => {
                     </div>
                     <ResponsiveGrid 
                         items={recentActivities} 
-                        CardComponent={ActivityCard} 
+                        CardComponent={ActivityCard}
                         basePath="activities" 
                         viewMorePath="/activities" 
                         sectionTitle="Activities" 

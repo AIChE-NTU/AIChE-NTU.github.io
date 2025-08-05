@@ -1,36 +1,5 @@
 [
     {
-        "id": "cider-making-workshop-zymurgy-2024",
-        "title": "Cider Making Workshop with Zymurgy Build",
-        "description": "A hands-on workshop where members learned the art and science of cider fermentation with the experts from Zymurgy Build.",
-        "details": "In a unique collaboration, our chapter partnered with Zymurgy Build for an exclusive cider making workshop. Participants got a crash course in fermentation science, from selecting the right apples to understanding yeast activity. It was a fantastic blend of chemical engineering principles and a fun, practical skill. Everyone left with their own batch of cider to ferment at home!",
-        "imageUrl": "/images/workshops/cider-workshops/1.jpg",
-        "date": "October 26, 2024",
-        "schedule": [
-            { "time": "2:00 PM", "event": "Introduction to Fermentation Science" },
-            { "time": "2:30 PM", "event": "Preparing the Must & Sanitization" },
-            { "time": "3:00 PM", "event": "Measuring Specific Gravity" },
-            { "time": "3:30 PM", "event": "Yeast Pitching & Fermenter Setup" },
-            { "time": "4:30 PM", "event": "Tasting Session & Q&A" }
-        ],
-        "galleryImages": [
-            "/images/workshops/cider-workshops/1.jpg",
-            "/images/workshops/cider-workshops/2.jpg",
-            "/images/workshops/cider-workshops/3.jpg",
-            "/images/workshops/cider-workshops/4.jpg",
-            "/images/workshops/cider-workshops/5.jpg",
-            "/images/workshops/cider-workshops/6.jpg",
-            "/images/workshops/cider-workshops/7.jpg",
-            "/images/workshops/cider-workshops/8.jpg",
-            "/images/workshops/cider-workshops/9.jpg",
-            "/images/workshops/cider-workshops/10.jpg",
-            "/images/workshops/cider-workshops/11.jpg",
-            "/images/workshops/cider-workshops/12.jpg",
-            "/images/workshops/cider-workshops/13.jpg",
-            "/images/workshops/cider-workshops/14.jpg"
-        ]
-    },
-    {
         "id": "career-sharing-session-2024",
         "title": "NTU x NUS Exchange Day",
         "description": "A collaborative event with NUS AIChE, featuring insights from alumni, past presidents, and professors on navigating a career in chemical engineering.",
@@ -38,12 +7,6 @@
         "imageUrl": "https://picsum.photos/seed/activity3/400/300",
         "date": "September 28, 2024",
         "registrationUrl": "",
-        "schedule": [
-            { "time": "1:00 PM", "event": "Opening Address by Chapter Presidents" },
-            { "time": "1:30 PM", "event": "Panel Discussion: Careers in Academia vs. Industry" },
-            { "time": "2:45 PM", "event": "Breakout Session: Q&A with Alumni" },
-            { "time": "4:00 PM", "event": "Networking Reception" }
-        ],
         "galleryImages": [
             "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=600&auto=format&fit=crop",
