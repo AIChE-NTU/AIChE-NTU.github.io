@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import type { Workshop } from '../../../constants'
 import { getDataUrl } from '../../../constants';
 import SubPageLayout from './SubPageLayout';
-import Gallery from '../../layout/gallery';
+import Gallery from '../../layout/Gallery';
 
 const WorkshopDetailPage: React.FC = () => {
     const { workshopId } = useParams<{ workshopId: string }>();
