@@ -1,6 +1,16 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { MailIcon, BriefcaseIcon, LocationMarkerIcon } from '../../ui/Icons';
+
+const generalemail = 'aiche.ntu23@gmail.com';
+const partnershipemail = 'aiche.ntu23@gmail.com';
+const schoolAddressLines = [
+  'Nanyang Technological University',
+  'School of Chemistry, Chemical Engineering and Biotechnology (CCEB)',
+  '50 Nanyang Avenue, Singapore 639798'
+];
+const schoolmapUrl = `https://maps.google.com/?q=${encodeURIComponent(schoolAddressLines.join(','))}`;
 
 const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '', inquiryType: 'general' });
@@ -15,8 +25,8 @@ const ContactPage: React.FC = () => {
     const { name, email, message, inquiryType } = formState;
 
     const recipient = inquiryType === 'partnership' 
-      ? 'partnerships@aichentu.org' 
-      : 'contact@aichentu.org';
+      ? partnershipemail 
+      : generalemail;
 
     const subject = `Website Inquiry - ${inquiryType === 'partnership' ? 'Partnership' : 'General'}: from ${name}`;
     
@@ -138,8 +148,8 @@ const ContactPage: React.FC = () => {
                   <div className="min-w-0">
                     <h3 className="text-base font-bold text-text-main mb-1">General Inquiries</h3>
                     <p className="text-sm text-text-muted mb-2">For any general questions</p>
-                    <a href="mailto:contact@aichentu.org" className="text-primary hover:text-primary-focus font-semibold transition-colors text-sm break-all">
-                      contact@aichentu.org
+                    <a href={`mailto:${generalemail}`} className="text-primary hover:text-primary-focus font-semibold transition-colors text-sm break-all">
+                      {generalemail}
                     </a>
                   </div>
                 </div>
@@ -151,8 +161,8 @@ const ContactPage: React.FC = () => {
                   <div className="min-w-0">
                     <h3 className="text-base font-bold text-text-main mb-1">Partnerships</h3>
                     <p className="text-sm text-text-muted mb-2">For collaboration opportunities</p>
-                    <a href="mailto:partnerships@aichentu.org" className="text-primary hover:text-primary-focus font-semibold transition-colors text-sm break-all">
-                      partnerships@aichentu.org
+                    <a href={`mailto:${partnershipemail}`} className="text-primary hover:text-primary-focus font-semibold transition-colors text-sm break-all">
+                      {partnershipemail}
                     </a>
                   </div>
                 </div>
@@ -164,10 +174,19 @@ const ContactPage: React.FC = () => {
                   <div className="min-w-0">
                     <h3 className="text-base font-bold text-text-main mb-1">Location</h3>
                     <p className="text-sm text-text-muted mb-2">Find us on campus</p>
-                    <p className="text-sm text-text-main font-medium">
-                      Nanyang Technological University<br />
-                      School of Chemical & Biomedical Engineering
-                    </p>
+                    <a
+                      href={schoolmapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-text-main font-medium hover:text-primary transition-colors underline break-words"
+                    >
+                      {schoolAddressLines.map((line, idx) => (
+                        <React.Fragment key={idx}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -176,10 +195,10 @@ const ContactPage: React.FC = () => {
               <div className="bg-primary/5 rounded-lg p-4 border border-primary/20">
                 <h3 className="text-base font-bold text-text-main mb-3">Quick Links</h3>
                 <div className="grid grid-cols-1 gap-2 text-sm">
-                  <a href="/join" className="text-primary hover:text-primary-focus font-medium transition-colors">Join Our Chapter</a>
-                  <a href="/activities" className="text-primary hover:text-primary-focus font-medium transition-colors">View Activities</a>
-                  <a href="/workshops" className="text-primary hover:text-primary-focus font-medium transition-colors">Workshops</a>
-                  <a href="/about" className="text-primary hover:text-primary-focus font-medium transition-colors">About Us</a>
+                  <Link to ="/join" className="text-primary hover:text-primary-focus font-medium transition-colors">Join Our Chapter</Link>
+                  <Link to ="/activities" className="text-primary hover:text-primary-focus font-medium transition-colors">View Activities</Link>
+                  <Link to ="/workshops" className="text-primary hover:text-primary-focus font-medium transition-colors">Workshops</Link>
+                  <Link to ="/about" className="text-primary hover:text-primary-focus font-medium transition-colors">About Us</Link>
                 </div>
               </div>
             </div>
