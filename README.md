@@ -2,20 +2,62 @@
 
 [![Maintenance Status](https://img.shields.io/badge/Maintenance-Active-green.svg)](https://github.com/AIChE-NTU/aiche-ntu.github.io)
 [![Website Status](https://img.shields.io/badge/Website-Live-blue.svg)](https://aiche-ntu.github.io)
-[![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](MAINTENANCE_SUMMARY.md)
+[![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](QUICK_REFERENCE.md)
 
-## 🎯 For Content Managers
+## 🎯 For Content Managers & Publicity Team
 
-**→ [Start Here: Maintenance Summary](MAINTENANCE_SUMMARY.md)**
+**→ [Start Here: Quick Reference Guide](QUICK_REFERENCE.md)**
 
-This website is designed to be fully maintainable through JSON files. No coding knowledge required!
+This website is designed to be fully maintainable through simple JSON files. **No coding knowledge required!**
+
+### ✨ What You Can Update Easily:
+- 📝 Add new events, workshops, and activities
+- 👥 Update team member information
+- 📰 Post new articles and announcements
+- 📧 Change contact information
+- 🏆 Add competition results
+- 🏭 Update industry visit details
 
 ### Quick Navigation
-- **[📖 Complete Maintenance Guide](WEBSITE_MAINTENANCE_GUIDE.md)** - Step-by-step instructions
-- **[⚡ Quick Reference](QUICK_REFERENCE.md)** - One-page cheat sheet  
-- **[🔧 Data Structure Guide](DATA_STRUCTURE.md)** - JSON file documentation
+- **[⚡ Quick Reference](QUICK_REFERENCE.md)** - Essential guide for content updates  
+- **[🎯 Step-by-Step Tutorial](WEBSITE_MAINTENANCE_GUIDE.md)** - Detailed instructions with screenshots
+- **[📊 Data Files Guide](DATA_STRUCTURE.md)** - Understanding JSON structure
 
-## 🏗️ For Developers
+## 🚀 How to Update Content (3 Simple Steps)
+
+1. **Find the File** - Go to `public` → `data` → choose the right JSON file
+2. **Edit Content** - Click the pencil icon ✏️ and make your changes
+3. **Save & Publish** - Add a commit message and click "Commit changes"
+
+**⏰ Changes appear on the website in 2-5 minutes!**
+
+---
+
+## 📋 Common Tasks
+
+| What You Want to Do | File to Edit | Guide |
+|---------------------|--------------|-------|
+| Add new event | `activities.json` | [Quick Reference](QUICK_REFERENCE.md) |
+| Update team members | `team.json` | [Quick Reference](QUICK_REFERENCE.md) |
+| Post new article | `articles.json` | [Quick Reference](QUICK_REFERENCE.md) |
+| Change contact info | `socialcontacts.json` | [Quick Reference](QUICK_REFERENCE.md) |
+| Add workshop | `workshops.json` | [Quick Reference](QUICK_REFERENCE.md) |
+
+---
+
+## � Need Help?
+
+- **Content Questions:** Ask your current executive committee
+- **Website Not Updating:** Wait 5 minutes, then refresh your browser
+- **JSON Errors:** Use [JSON Validator](https://jsonlint.com/) to check your format
+- **Technical Issues:** Create a GitHub issue or contact the technical team
+
+---
+
+## �🏗️ For Developers Only
+
+<details>
+<summary>Click to expand technical details</summary>
 
 ### Tech Stack
 - **Frontend:** React 19 + TypeScript + Tailwind CSS
@@ -91,3 +133,9 @@ Website automatically deploys to GitHub Pages when changes are pushed to the `ma
 ---
 
 **Built with ❤️ by the AIChE NTU Student Chapter Technical Team**
+
+</details>
+
+---
+
+**✨ Ready to update content? Start with the [Quick Reference Guide](QUICK_REFERENCE.md)!**
