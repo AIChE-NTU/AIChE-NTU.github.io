@@ -10,7 +10,6 @@ interface JoinUsAssets {
     pageDescription: string;
     aicheMembershipUrl: string;
     membershipProofFormUrl: string;
-    qrCodeImageUrl: string;
     step1: { title: string; description: string };
     step2: { title: string; description: string };
     step3: { title: string; description: string };
@@ -42,6 +41,9 @@ const JoinUsPage: React.FC = () => {
     if (!assets) {
         return <p className="text-center text-red-500">Could not load instructions. Please try again later.</p>;
     }
+
+    // Generate QR code URL dynamically from the form URL
+    const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(assets.membershipProofFormUrl)}`;
 
     return (
         <div className="space-y-16">
@@ -98,7 +100,7 @@ const JoinUsPage: React.FC = () => {
                             <div className="text-center">
                                 <p className="text-text-muted mb-2 font-semibold">Or scan with your phone</p>
                                 <Card className="p-2 inline-block">
-                                    <img src={assets.qrCodeImageUrl} alt="QR Code for membership submission form" className="w-32 h-32" />
+                                    <img src={qrCodeUrl} alt="QR Code for membership submission form" className="w-32 h-32" />
                                 </Card>
                             </div>
                         </div>

@@ -4,8 +4,7 @@
     "pageTitle": "Become an AIChE Member",
     "pageDescription": "Follow these steps to join our student chapter and unlock exclusive benefits.",
     "aicheMembershipUrl": "https://www.aiche.org/students/membership",
-    "membershipProofFormUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSo5EBMQmF71LhOSLMALm0g5URUw0T1BEU0lZSlpNRjRDNzdQNDQxVEZZRSQlQCN0PWcu",
-    "qrCodeImageUrl": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fforms.cloud.microsoft%2FPages%2FResponsePage.aspx%3Fid%3DSJPOFSq-K0aPwOF2WpsgSo5EBMQmF71LhOSLMALm0g5URUw0T1BEU0lZSlpNRjRDNzdQNDQxVEZZRSQlQCN0PWcu",
+    "membershipProofFormUrl": "https://forms.office.com/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSoCkRExZ235KhPx96Id5bYVUNEFSRVRKUzkzMjBaUEFWU1VFVzFOUlg3MyQlQCN0PWcu",
     "step1": {
       "title": "Register with AIChE National",
       "description": "First, navigate to the official AIChE student membership page and complete the registration process. This will give you your official membership ID."
