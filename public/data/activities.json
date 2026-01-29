@@ -46,6 +46,14 @@
         "date": "November 15, 2025"
     },
     {
+        "id": utm-visit-2025",
+        "title": UTM-NTU Visit",
+        "description": "Bridging Chemical Engineers Beyond Borders",
+        "details": "The visit offered valuable exposure beyond the classroom, through faculty level disccusions on future collaborations, to an engaging lab tour of CCEB B5 Pilot Plant and Emergent Food Science facilities.",
+        "imageUrl": 
+        "date": "December 20, 2025"
+    },
+    {
         "id": "singapore-cheme-bootcamp-2026",
         "title": "SG ChemE Bootcamp: Industry 4.0",
         "description": "A proposed 2-day bootcamp before the semester starts, focused on Industry 4.0 in Chemical Engineering, in collaboration with other Singapore student chapters.",
@@ -60,7 +68,6 @@
         "details": "Inspiring the next generation of engineers! We're organizing a grand outreach event for JC and Polytechnic students. The day will feature an 'Amazing Race' style quiz across campus, followed by a final competition at NTU. This is a great chance for our members to act as mentors and showcase the fun side of chemical engineering.",
         "imageUrl": "https://picsum.photos/seed/activity6/400/300",
         "date": "February 21, 2026"
-         
     },
     {
         "id": "industrial-mentorship-launch-2026",
