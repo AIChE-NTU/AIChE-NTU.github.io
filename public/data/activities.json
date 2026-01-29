@@ -30,6 +30,14 @@
         "date": "August 25, 2025"
     },
     {
+        "id": "nus-ntu-exchange-day-2025",
+        "title": "NUS-NTU AIChE Exchange Day",
+        "description": "A meaningful platform for learning and connection. Through discussions and games, insights were exchanged on leadership, teamwork, and the future of chemical engineering.",
+        "details": "The event strengthened and solidified our bond with NUS AIChE as sister chapters and inspired new ideas for collaboration ahead.",
+        "imageUrl": 
+        "date": "October 2, 2025"
+    },
+    {
         "id": "social-night-trivia-games-2025",
         "title": "Social Night: Trivia & Boardgames",
         "description": "Unwind and connect with fellow members over a night of fun trivia and classic boardgames. A perfect internal bonding event.",
@@ -52,6 +60,7 @@
         "details": "Inspiring the next generation of engineers! We're organizing a grand outreach event for JC and Polytechnic students. The day will feature an 'Amazing Race' style quiz across campus, followed by a final competition at NTU. This is a great chance for our members to act as mentors and showcase the fun side of chemical engineering.",
         "imageUrl": "https://picsum.photos/seed/activity6/400/300",
         "date": "February 21, 2026"
+         
     },
     {
         "id": "industrial-mentorship-launch-2026",
