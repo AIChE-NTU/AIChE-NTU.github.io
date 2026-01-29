@@ -22,86 +22,115 @@
           "linkedinUrl": "#"
         },
         {
-          "name": "Charlie Brown",
-          "role": "Treasurer & Sponsorship Lead",
-          "type": "lead",
-          "bio": "Manages the chapter's finances and secures sponsorships to fund our events and projects.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Charlie_Brown.jpeg",
-          "linkedinUrl": "#"
-        }
+          "name": "See Liang Chian",
+        "role": "Vice President (Internal Affairs)",
+        "type": "lead",
+        "bio": "Manage internal operations, communication, and welfare.",
+        "imageUrl": 
+        "linkedinUrl": "#"
+      },
+      {
+        "name": "Nathan Gunardi",
+        "role": "Vice President (External Affairs)",
+        "type": "lead",
+        "bio": "Manage external partnerships, sponsorships, and collaborations.",
+        "imageUrl": 
+        "linkedinUrl": "#"
+      },
+      {
+        "name": "Elwin Lee Wei Shun",
+        "role": "Honorary Treasurer",
+        "type": "lead",
+        "bio": "Manages the chapter's finances and secures sponsorships to fund our events and projects.",
+        "imageUrl": "",
+        "linkedinUrl": "#"
+      },
+      {
+        "name": "Chia Yong Xin",
+        "role": "Honorary General Secretary",
+        "type": "lead",
+        "bio": "Maintains the chapter's official records, minutes, and correspondance.",
+        "imageUrl": "",
+        "linkedinUrl": "#"
+      },
       ],
-      "Events Team": [
+      "External Relation & Business Team": [
         {
-          "name": "Diana Miller",
+          "name": "Benjamin Chik Yi Sheng",
+          "role": "Business Director",
+          "type": "lead",
+          "bio": "Focuses on connecting students with industry professionals and organizing plant tours and networking events.",
+          "imageUrl": "",
+          "linkedinUrl": "#"
+        },
+        {
+          "name": "Loh Hong Sheng",
+          "role": "Business Director",
+          "type": "lead",
+          "bio": "Focuses on connecting students with industry professionals and organizing plant tours and networking events.",
+          "imageUrl": "",
+          "linkedinUrl": "#"
+        },
+      ],
+      "Academic & Professional Development Team": [
+        {
+          "name": "Eileen Paw Zhang Hui",
+          "role": "Academic Director",
+          "type": "lead",
+          "bio": "Lead planning and execution of chapter's workshops, competitions, and academic initiatives.",
+          "imageUrl": "",
+          "linkedinUrl": "#"
+        },
+        {
+          "name": "Sng Siew Leng",
+          "role": "Projects Director",
+          "type": "lead",
+          "bio": "Lead project initiation and idea development for chapter's academic and industrial engagement",
+          "imageUrl": "",
+          "linkedinUrl": "#"
+        },
+        {
+          "name": "Sheryl Tow Zhi Yu",
+          "role": "Projects Director",
+          "type": "lead",
+          "bio": "Lead project initiation and idea development for chapter's academic and industrial engagement",
+          "imageUrl": "",
+          "linkedinUrl": "#"
+        },
+      ],
+      "Events & Student Life Team": [
+        {
+          "name": "Koh Li Jie",
           "role": "Events Director",
           "type": "lead",
-          "bio": "Handles all chapter communications, manages social media, and ensures our community stays engaged.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Chloe_Ng.jpeg",
+          "bio": "Handles planning and execution of chapter's social and welfare events for student engagement.",
+          "imageUrl": "",
           "linkedinUrl": "#"
         },
         {
-          "name": "Kevin Durant",
-          "role": "Events Committee",
-          "type": "member",
-          "bio": "Assists the Events Director in planning and executing workshops, seminars, and social gatherings.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Kevin_Durant.jpeg",
-          "linkedinUrl": "#"
-        }
-      ],
-      "Publications & Outreach": [
-        {
-          "name": "Emily Johnson",
-          "role": "Publications Lead",
+          "name": "Lee Min Xuan Kaelyn",
+          "role": "Events Director",
           "type": "lead",
-          "bio": "Oversees the chapter's publications, including newsletters and promotional materials.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Emily_Johnson.jpeg",
+          "bio": "Handles planning and execution of chapter's social and welfare events for student engagement.",
+          "imageUrl": "",
           "linkedinUrl": "#"
         },
-        {
-          "name": "Michael Smith",
-          "role": "Outreach Coordinator",
-          "type": "member",
-          "bio": "Responsible for outreach initiatives to engage with the wider community and promote AIChE activities.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Michael_Smith.jpeg",
-          "linkedinUrl": "#"
-        }
-        
-      ],
-      "Web Development & Design": [
-        {
-          "name": "Sarah Connor",
-          "role": "Webmaster",
+      {
+      "name": "Shaik Mohamed Ilyas Luqman Abdulqayyoom",
+          "role": "Logistics Director",
           "type": "lead",
-          "bio": "Maintains the chapter's website and ensures it is up-to-date with the latest information.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Sarah_Connor.jpeg",
+          "bio": "Handles chapter's event logistics and on-ground execution during events.",
+          "imageUrl": "",
           "linkedinUrl": "#"
         },
         {
-          "name": "John Doe",
-          "role": "Design Lead",
-          "type": "member",
-          "bio": "Responsible for the visual design of our materials and ensuring a consistent brand image.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/John_Doe.jpeg",
-          "linkedinUrl": "#"
-        }
-      ],
-      "Membership & Engagement": [
-        {
-          "name": "Alice Johnson",
-          "role": "Membership Coordinator",
+          "name": "Japheth Goh",
+          "role": "Logistics Director",
           "type": "lead",
-          "bio": "Focuses on member recruitment, retention, and engagement activities to build a strong community.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Alice_Johnson.jpeg",
+          "bio": "Handles chapter's event logistics and on-ground execution during events.",
+          "imageUrl": "",
           "linkedinUrl": "#"
         },
-        {
-          "name": "Bob Smith",
-          "role": "Engagement Officer",
-          "type": "member",
-          "bio": "Organizes events and activities to foster a sense of belonging among members.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Bob_Smith.jpeg",
-          "linkedinUrl": "#"
-        }
       ],
       "Alumni Relations": [
         {
@@ -113,67 +142,23 @@
           "linkedinUrl": "#"
         }
       ],
-      "Academic & Workshops":[
+       "Marketing & Publications": [
         {
-          "name": "David Lee",
-          "role": "Academic Lead",
+          "name": "Chua Kai Lin Clementia",
+          "role": "Marketing & Publication Director",
           "type": "lead",
-          "bio": "Organizes academic workshops and seminars to enhance the learning experience of members.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/David_Lee.jpeg",
+          "bio": "Handles the chapter's communication channels and vidual identity across all platforms.",
+          "imageUrl": "",
           "linkedinUrl": "#"
         },
         {
-          "name": "Eva Green",
-          "role": "Workshop Coordinator",
-          "type": "member",
-          "bio": "Assists in planning and executing workshops that provide practical skills and knowledge.",
-          "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Eva_Green.jpeg",
+          "name": "Tay Ya Wen",
+          "role": "Marketing & Publication Director",
+          "type": "lead",
+          "bio": "Handles the chapter's communication channels and vidual identity across all platforms.",
+          "imageUrl": "",
           "linkedinUrl": "#"
         }
       ]
-      
     }
-  },
-  "Course Representatives": {
-    "description": "Serving as the bridge between the student body and the AIChE student chapter.",
-    "members": [
-      {
-        "name": "Eileen Paw Zhang Hui",
-        "role": "Chem & Biomolecular Eng. Rep.",
-        "type": "lead",
-        "bio": "Representing the interests and concerns of students from the Chemical and Biomolecular Engineering programme.",
-        "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Eileen_Paw.jpeg",
-        "linkedinUrl": "#"
-      },
-      {
-        "name": "Jason Liau Yi Jun",
-        "role": "Bioengineering Rep.",
-        "type": "lead",
-        "bio": "Serving as the bridge between the Bioengineering student body and the AIChE student chapter.",
-        "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/James_Wong.jpeg",
-        "linkedinUrl": "#"
-      }
-    ]
-  },
-  "Student Advisors": {
-    "description": "Providing mentorship and guidance to undergraduate members based on academic and industry experience.",
-    "members": [
-      {
-        "name": "Alex Chen",
-        "role": "Senior Student Advisor",
-        "type": "lead",
-        "bio": "A graduate student providing mentorship and guidance to undergraduate members based on academic and industry experience.",
-        "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Alex_Chen.jpeg",
-        "linkedinUrl": "#"
-      },
-      {
-        "name": "Samantha Lee",
-        "role": "Peer Mentor",
-        "type": "member",
-        "bio": "A final-year student helping junior members navigate their curriculum and prepare for their final year projects.",
-        "imageUrl": "https://raw.githubusercontent.com/xq-teo/aiche-images/main/Samantha_Lee.jpeg",
-        "linkedinUrl": "#"
-      }
-    ]
   }
-}
