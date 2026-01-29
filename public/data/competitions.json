@@ -25,6 +25,14 @@
         "registrationUrl": ""
     },
     {
+        "id": "aiche-jeopardy-competition-2026",
+        "title": "AIChE Jeopardy Competition",
+        "description": "Challenge your knowledge across diverse and exciting topics. Sharpen your critical thinking and quick decision-making skills. Build strong teamwork and enjoy the thrill of competition!",
+        "details": "Individual Preliminary Quiz followed by live Buzzer-style Knockout Rounds. Open to all undergraduate chemical engineering students. Team size of 4 to 5 students.",
+        "imageUrl": 
+        "date": "January 31, 2026",
+        "registrationUrl": ""
+    {
         "id": "aiche-week-hackathon-2026",
         "title": "AIChE Week – Hackathon",
         "description": "A week-long, high-intensity hackathon where teams will solve a real-world chemical engineering problem provided by an industry partner.",
